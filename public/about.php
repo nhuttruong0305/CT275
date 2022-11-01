@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <?php require_once '../partials/header.php'; ?>
     <!-- Chèn header -->
     <main class="container">
         <h1 style="font-weight: 800;">Giới thiệu</h1>
@@ -24,7 +25,7 @@
         <p>Chúng tôi không chỉ cung cấp sản phẩm nội thất, chúng tôi mang cho bạn phong cách sống. “Less is more” - Một sự đơn giản nhất định nhưng tinh tế trong không gian sống sẽ giúp bạn dễ dàng cân bằng hơn trong cuộc sống.</p>
     </main>
     <!-- Chèn footer -->
-
+    <?php require_once '../partials/footer.php'; ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
