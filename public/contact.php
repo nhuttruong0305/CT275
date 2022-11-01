@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <?php require_once '../partials/header.php' ?>
     <!-- Chèn header -->
     <main class="container-fluid" id="main_contact">
         <div class="row">
@@ -74,7 +75,7 @@
         </div>
     </main>
     <!-- Chèn footer -->
-
+    <?php require_once '../partials/footer.php' ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
