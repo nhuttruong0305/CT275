@@ -1,28 +1,28 @@
     <footer class="container">
         <div id="section_policy" class="row mt-5 justify-content-center align-items-center">
             <div class="col-6 col-lg-3">
-                <img src="../asset/img/footer/policy1.webp" alt="">
+                <img src="img/footer/policy1.webp" alt="">
                 <div>
                     <span>GIAO HÀNG MIỄN PHÍ</span>
                     <p>Với đơn hàng trên 30.000đ</p>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
-                <img src="../asset/img/footer/policy2.webp" alt="">
+                <img src="img/footer/policy2.webp" alt="">
                 <div>
                     <span>HỖ TRỢ KHÁCH HÀNG</span>
                     <p>Nhanh chóng thuận tiện</p>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
-                <img src="../asset/img/footer/policy3.webp" alt="">
+                <img src="img/footer/policy3.webp" alt="">
                 <div>
                     <span>ĐỔI TRẢ 3 NGÀY</span>
                     <p>Hấp dẫn chưa từng có</p>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
-                <img src="../asset/img/footer/policy4.webp" alt="">
+                <img src="img/footer/policy4.webp" alt="">
                 <div>
                     <span>GIÁ CẢ HỢP LÝ</span>
                     <p>Mua sắm thả ga</p>
@@ -59,12 +59,12 @@
                     <a href=""><i class="fab fa-instagram fa-lg"></i></a>
                 </p>
                 <h4 class="footer_title">PHƯƠNG THỨC THANH TOÁN</h4>
-                <img src="../asset/img/footer/payment_1.svg" alt="" class="my-1">
-                <img src="../asset/img/footer/payment_2.svg" alt="" class="my-1">
-                <img src="../asset/img/footer/payment_3.svg" alt="" class="my-1">
-                <img src="../asset/img/footer/payment_4.svg" alt="" class="my-1">
-                <img src="../asset/img/footer/payment_5.svg" alt="" class="my-1">
-                <img src="../asset/img/footer/payment_6.svg" alt="" class="my-1">
+                <img src="img/footer/payment_1.svg" alt="" class="my-1">
+                <img src="img/footer/payment_2.svg" alt="" class="my-1">
+                <img src="img/footer/payment_3.svg" alt="" class="my-1">
+                <img src="img/footer/payment_4.svg" alt="" class="my-1">
+                <img src="img/footer/payment_5.svg" alt="" class="my-1">
+                <img src="img/footer/payment_6.svg" alt="" class="my-1">
             </div>                        
         </div>
         <div id="footer_bottom" class="row justify-content-center align-items-center">

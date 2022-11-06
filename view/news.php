@@ -7,7 +7,7 @@
     <title>Tin tức</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="../asset/css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php require_once '../partials/header.php' ?>
+    <?php require_once 'header.php'; ?>
     <!-- Chèn header -->
     <main>
         <div id="breadcrumb-background">
@@ -33,7 +33,7 @@
             </div>
             <div id="news-body" class="row">
                 <div class="col-md-4 col-sm-6 mb-4">
-                    <img src="../asset/img/news/news-main1.webp" alt="">
+                    <img src="img/news/news-main1.webp" alt="">
                     <div class="d-flex justify-content-center align-items-center news-author">
                         <i class="fas fa-calendar-check"></i>&nbsp;<b>17/04/2022</b>&nbsp;&nbsp;Đăng bởi:<b>LUXENUS</b>
                     </div>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
-                    <img src="../asset/img/news/news-main2.webp" alt="">
+                    <img src="img/news/news-main2.webp" alt="">
                     <div class="d-flex justify-content-center align-items-center news-author">
                         <i class="fas fa-calendar-check"></i>&nbsp;<b>14/11/2022</b>&nbsp;&nbsp;Đăng bởi:<b>LUXENUS</b>
                     </div>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
-                    <img src="../asset/img/news/news-main3.webp" alt="">
+                    <img src="img/news/news-main3.webp" alt="">
                     <div class="d-flex justify-content-center align-items-center news-author">
                         <i class="fas fa-calendar-check"></i>&nbsp;<b>3/5/2022</b>&nbsp;&nbsp;Đăng bởi:<b>LUXENUS</b>
                     </div>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
-                    <img src="../asset/img/news/news-main4.webp" alt="">
+                    <img src="img/news/news-main4.webp" alt="">
                     <div class="d-flex justify-content-center align-items-center news-author">
                         <i class="fas fa-calendar-check"></i>&nbsp;<b>15/5/2022</b>&nbsp;&nbsp;Đăng bởi:<b>LUXENUS</b>
                     </div>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
-                    <img src="../asset/img/news/news-main5.webp" alt="">
+                    <img src="img/news/news-main5.webp" alt="">
                     <div class="d-flex justify-content-center align-items-center news-author">
                         <i class="fas fa-calendar-check"></i>&nbsp;<b>15/01/2022</b>&nbsp;&nbsp;Đăng bởi:<b>LUXENUS</b>
                     </div>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
-                    <img src="../asset/img/news/news-main6.webp" alt="">
+                    <img src="img/news/news-main6.webp" alt="">
                     <div class="d-flex justify-content-center align-items-center news-author">
                         <i class="fas fa-calendar-check"></i>&nbsp;<b>01/09/2022</b>&nbsp;&nbsp;Đăng bởi:<b>LUXENUS</b>
                     </div>
@@ -97,7 +97,7 @@
 
     </main>
     <!-- Chèn footer -->
-    <?php require_once '../partials/footer.php' ?>
+    <?php require_once 'footer.php'; ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
