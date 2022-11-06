@@ -1,4 +1,3 @@
-<?php require_once 'header.php'; ?>
 <!-- Chèn header -->
 <title>Liên hệ</title>
 <main class="container-fluid" id="main_contact">
@@ -59,4 +58,4 @@
     </div>
 </main>
 <!-- Chèn footer -->
-<?php require_once 'footer.php'; ?>
+

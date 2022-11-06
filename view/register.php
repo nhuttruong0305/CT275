@@ -1,4 +1,3 @@
-<?php require_once 'header.php'; ?>
 <title>Đăng ký tài khoản</title>
 <!-- Chèn header -->
 <main>
@@ -35,7 +34,6 @@
 </main>
 <!-- Chèn footer -->
 
-<?php require_once 'footer.php' ?>
 
     
 

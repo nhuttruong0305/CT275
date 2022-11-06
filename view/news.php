@@ -1,4 +1,3 @@
-<?php require_once 'header.php'; ?>
 <title>Tin tức</title>
 <!-- Chèn header -->
 <main>
@@ -81,4 +80,4 @@
 
 </main>
 <!-- Chèn footer -->
-<?php require_once 'footer.php'; ?>
+

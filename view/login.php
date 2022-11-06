@@ -1,4 +1,3 @@
-<?php require_once 'header.php'; ?>
 <title>Đăng nhập</title>
 <!-- Chèn header -->
 <main class="container-fluid">
@@ -41,4 +40,4 @@
     </div>
 </main>
 <!-- Chèn footer -->
-<?php require_once 'footer.php'; ?>
+

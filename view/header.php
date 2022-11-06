@@ -23,8 +23,8 @@
 				</form>
 			</div>
 			<div id="account_cart" class="col-md-4 d-flex my-3 justify-content-center">
-				<a class="mx-3" href="../view/register.php?action=register">ĐĂNG KÝ</a>|
-				<a class="mx-3" href="../view/login.php?action=login">ĐĂNG NHẬP</a>|
+				<a class="mx-3" href="../controller/index.php?action=register">ĐĂNG KÝ</a>|
+				<a class="mx-3" href="../controller/index.php?action=login">ĐĂNG NHẬP</a>|
 				<a class="mx-3" href="" id="cart">
 					<i class="fas fa-dolly" style="color: rgb(247,148,29);"></i>
 					<span id="count_product">2</span>
@@ -62,13 +62,13 @@
 							</div>
 						</li>
 						<li class="nav-item mx-2">
-							<a class="nav-link font-weight-bold" href="../view/about.php?action=about">GIỚI THIỆU</a>
+							<a class="nav-link font-weight-bold" href="../controller/index.php?action=about">GIỚI THIỆU</a>
 						</li>
 						<li class="nav-item mx-2">
-							<a class="nav-link font-weight-bold" href="#">TIN TỨC</a>
+							<a class="nav-link font-weight-bold" href="../controller/index.php?action=news">TIN TỨC</a>
 						</li>
 						<li class="nav-item mx-2">
-							<a class="nav-link font-weight-bold" href="#">LIÊN HỆ</a>
+							<a class="nav-link font-weight-bold" href="../controller/index.php?action=contact">LIÊN HỆ</a>
 						</li>
 					</ul>
 				</div>
