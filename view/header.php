@@ -1,6 +1,6 @@
     <header class="container mt-4">
         <div class="row align-items-center">
-            <div class="col-md-3 my-3"><img style="width: 100%;" src="../asset/img/LUXENUS FURNITURE.png" alt=""></div>
+            <div class="col-md-3 my-3"><img style="width: 100%;" src="img/LUXENUS FURNITURE.png" alt=""></div>
             <div class="col-md-5 my-3">
                 <form id="form_search" action="" method="get" class="d-flex justify-content-center align-items-center">
                     <input class="d-inline-block" type="text" id="input_product" placeholder="Nhập từ khóa tìm kiếm ...">
