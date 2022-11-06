@@ -25,7 +25,7 @@
 			<div id="account_cart" class="col-md-4 d-flex my-3 justify-content-center">
 				<a class="mx-3" href="../controller/index.php?action=register">ĐĂNG KÝ</a>|
 				<a class="mx-3" href="../controller/index.php?action=login">ĐĂNG NHẬP</a>|
-				<a class="mx-3" href="" id="cart">
+				<a class="mx-3" href="../controller/index.php?action=cart" id="cart">
 					<i class="fas fa-dolly" style="color: rgb(247,148,29);"></i>
 					<span id="count_product">2</span>
 				</a>

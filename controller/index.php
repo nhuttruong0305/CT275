@@ -18,6 +18,9 @@
             case 'register':
                 include_once '../view/register.php';
                 break;
+            case 'cart':
+                include_once '../view/cart.php';
+                break;
             default:
                 include '../view/home.php';
                 break;
