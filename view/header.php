@@ -23,8 +23,16 @@
 				</form>
 			</div>
 			<div id="account_cart" class="col-md-4 d-flex my-3 justify-content-center">
-				<a class="mx-3" href="../controller/index.php?action=register">ĐĂNG KÝ</a>|
-				<a class="mx-3" href="../controller/index.php?action=login">ĐĂNG NHẬP</a>|
+			<?php
+			  if(isset($_SESSION['login_success'])){
+						echo "<div class='d-flex'><span class='font-italic'>Người dùng&nbsp;</span>"."<span class='font-weight-bold'>".$_SESSION['login_success']."</span>";
+				 	echo "<a href='../controller/index.php?action=logout' style='text-decoration:none;	'> &nbsp;| Đăng xuất</a></div>";
+				 }else{
+				?>
+					<a class="mx-3" href="../controller/index.php?action=register">ĐĂNG KÝ</a>|
+					<a class="mx-3" href="../controller/index.php?action=login">ĐĂNG NHẬP</a>|
+	
+				<?php }?>
 				<a class="mx-3" href="../controller/index.php?action=cart" id="cart">
 					<i class="fas fa-dolly" style="color: rgb(247,148,29);"></i>
 					<span id="count_product">2</span>
@@ -39,7 +47,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item active mx-2">
-							<a class="nav-link font-weight-bold" href="#">TRANG CHỦ <span class="sr-only">(current)</span></a>
+							<a class="nav-link font-weight-bold" href="../controller/index.php?actiono=home">TRANG CHỦ <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item dropdown mx-2">
 							<a id="product_portfolio" class="nav-link dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-expanded="false">

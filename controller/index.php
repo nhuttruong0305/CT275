@@ -1,25 +1,65 @@
 <?php 
+    session_start();
     include '../view/header.php'; 
+    include '../model/handle_function.php';
 
     if(isset($_GET['action'])) {
         switch ($_GET['action']){ 
             case 'about':
-                include_once '../view/about.php';
+                include '../view/about.php';
                 break;  
             case 'contact':
-                include_once '../view/contact.php';
+                include '../view/contact.php';
                 break;  
-            case 'login':
-                include_once '../view/login.php';
+            case 'login':    
+                $status_login = login_process();
+                if($status_login == 'success'){
+                    echo '<script language="javascript">';
+                    echo 'alert("Đăng nhập thành công !");'; 
+                    echo '</script>';
+                    echo "<script>window.location.href='index.php?action=home'</script>";
+                }else if($status_login == 'fail'){
+                    echo '<script language="javascript">';
+                    echo 'alert("Đăng nhập thất bại !");'; 
+                    echo '</script>';
+                }
+                include '../view/login.php';
+                break;
+            case 'logout':
+                include '../view/logout.php';
+                echo "<script>window.location.href='index.php?action=home'</script>";
                 break;
             case 'news':
-                include_once '../view/news.php';
+                include '../view/news.php';
                 break;
             case 'register':
-                include_once '../view/register.php';
+                $status_register = register_process();
+                switch($status_register){
+                    case 'exist_email':
+                        echo '<script language="javascript">';
+                        echo 'alert("Email đã được sử dụng !");'; 
+                        echo '</script>';
+                        break;
+                    case 'fail':
+                        echo '<script language="javascript">';
+                        echo 'alert("Đăng kí thất bại do chưa nhập đủ thông tin !");'; 
+                        echo '</script>';
+                        break;
+                    case 'no_duplicated_password':
+                        echo '<script language="javascript">';
+                        echo 'alert("Nhập lại mật khẩu không chính xác !");'; 
+                        echo '</script>';
+                        break;
+                    case 'success':
+                        echo '<script language="javascript">';
+                        echo 'alert("Đăng kí tài khoản thành công ! Hãy tiến hành đăng nhập !");'; 
+                        echo '</script>';
+                        break;
+                }
+                include '../view/register.php';
                 break;
             case 'cart':
-                include_once '../view/cart.php';
+                include '../view/cart.php';
                 break;
             default:
                 include '../view/home.php';

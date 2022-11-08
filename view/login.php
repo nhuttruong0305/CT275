@@ -17,20 +17,20 @@
         <div class="col">
             <h2 class="font-weight-bold mt-5  text-center">ĐĂNG NHẬP</h2>
             <br>
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Tài khoản Email: </label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Mật khẩu: </label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Ghi nhớ đăng nhập</label>
-                </div>
-                <button type="submit" class="btn btn-primary d-block" style="margin:0 auto" id="btn_login">Đăng nhập</button>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Tài khoản Email: </label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Mật khẩu: </label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Ghi nhớ đăng nhập</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary d-block" style="margin:0 auto" id="btn_login" name="btn_login">Đăng nhập</button>
                 </form>
                 <span class="d-block text-center mt-4">Bạn chưa có tài khoản, vui lòng đăng kí tại <a href="signup.html">đây.</a></span>
         </div>

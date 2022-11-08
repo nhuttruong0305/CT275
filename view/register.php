@@ -15,21 +15,21 @@
     <form id="registration-form" class="container" action="#" method="post" enctype="multipart/form-data">
         <!-- nhớ sửa lại thuộc tính enctype -->
         <div class="form-group">
-            <input class="form-control form-control-lg" type="text" name="fullname" placeholder="Họ và tên">
+            <input class="form-control form-control-lg" type="text" name="fullname" placeholder="Họ và tên" required>
         </div>
         <div class="form-group">
-            <input class="form-control form-control-lg" type="email" name="email" placeholder="Email">
+            <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" required>
         </div>
         <div class="form-group">
-            <input class="form-control form-control-lg" type="text" name="number_phone" placeholder="Số điện thoại">
+            <input class="form-control form-control-lg" type="text" name="number_phone" placeholder="Số điện thoại" required>
         </div>
         <div class="form-group">
-            <input class="form-control form-control-lg" type="password" name="password" placeholder="Mật khẩu" id="password">
+            <input class="form-control form-control-lg" type="password" name="password" placeholder="Mật khẩu" id="password" required>
         </div>
         <div class="form-group">
-            <input class="form-control form-control-lg" type="password" name="confirm_password" placeholder="Nhập lại mật khẩu">
+            <input class="form-control form-control-lg" type="password" name="confirm_password" placeholder="Nhập lại mật khẩu" required>
         </div>
-        <button id="register-button" type="submit" class="btn">Đăng ký</button>
+        <button id="register-button" type="submit" class="btn" name="btn_register">Đăng ký</button>
     </form>
 </main>
 <!-- Chèn footer -->
