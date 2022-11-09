@@ -27,8 +27,8 @@
                         <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                     </div>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Ghi nhớ đăng nhập</label>
+                        <input type="checkbox" class="form-check-input" id="remember_1" name="remember_login">
+                        <label class="form-check-label" for="remember_1">Ghi nhớ đăng nhập</label>
                     </div>
                     <button type="submit" class="btn btn-primary d-block" style="margin:0 auto" id="btn_login" name="btn_login">Đăng nhập</button>
                 </form>

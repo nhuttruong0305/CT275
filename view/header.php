@@ -1,3 +1,12 @@
+<?php
+	if(isset($_COOKIE["remember_login"])){
+		$_SESSION['login_success'] = $_COOKIE["remember_login"];
+	}
+	if(empty($_GET['action'])){
+		$_GET['action'] = 'home';
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,13 +35,14 @@
 			<?php
 			  if(isset($_SESSION['login_success'])){
 						echo "<div class='d-flex'><span class='font-italic'>Người dùng&nbsp;</span>"."<span class='font-weight-bold'>".$_SESSION['login_success']."</span>";
-				 	echo "<a href='../controller/index.php?action=logout' style='text-decoration:none;	'> &nbsp;| Đăng xuất</a></div>";
+						echo "<a href='../controller/index.php?action=logout' style='text-decoration:none;	'> &nbsp;| Đăng xuất</a></div>";
 				 }else{
 				?>
 					<a class="mx-3" href="../controller/index.php?action=register">ĐĂNG KÝ</a>|
 					<a class="mx-3" href="../controller/index.php?action=login">ĐĂNG NHẬP</a>|
 	
 				<?php }?>
+
 				<a class="mx-3" href="../controller/index.php?action=cart" id="cart">
 					<i class="fas fa-dolly" style="color: rgb(247,148,29);"></i>
 					<span id="count_product">2</span>
@@ -47,36 +57,32 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item active mx-2">
-							<a class="nav-link font-weight-bold" href="../controller/index.php?actiono=home">TRANG CHỦ <span class="sr-only">(current)</span></a>
+							<a class="nav-link font-weight-bold" style="<?php if($_GET['action'] == 'home') echo ' color: rgba(0,0,0,.9) !important;'; ?> ;color:rgba(0,0,0,.5);" href="../controller/index.php?action=home">TRANG CHỦ <span class="sr-only"></span></a>
 						</li>
 						<li class="nav-item dropdown mx-2">
-							<a id="product_portfolio" class="nav-link dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+							<a id="product_portfolio"  style="<?php if($_GET['action'] == 'product') echo 'color: rgba(0,0,0,.9);'; ?>" class="nav-link dropdown-toggle font-weight-bold" href="../controller/index.php?action=product" role="button" data-toggle="dropdown" aria-expanded="true">
 								SẢN PHẨM
 							</a>
 							<div class="dropdown-menu" id="dropdown_container">
-								<a class="dropdown-item d-flex justify-content-between align-items-center" href="#" style="border-top: 1px solid rgb(247,148,29);" id="parent_product">
-										Sofa <i class="fas fa-caret-right"></i>
-									<ul id="child_product">
-										<li>Sofa giường</li>
-										<li>Sofa chiếu</li>
-										<li>Sofa</li>
-									</ul>
+								<a class="dropdown-item d-flex justify-content-between align-items-center" href="../controller/index.php?action=product&category_id=all" style="border-top: 1px solid rgb(247,148,29);" id="parent_product">
+										Tất cả sản phẩm 
 								</a>
-								<a class="dropdown-item" href="#">Ghế</a>
-								<a class="dropdown-item" href="#">Trang trí</a>
-								<a class="dropdown-item" href="#">Kệ sách</a>
-								<a class="dropdown-item" href="#">Bàn</a>
-								<a class="dropdown-item" href="#">Tủ quần áo</a>
+								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=1">Sofa</a>
+								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=2">Ghế</a>
+								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=3">Trang trí</a>
+								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=4">Kệ sách</a>
+								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=5">Bàn</a>
+								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=6">Tủ quần áo</a>
 							</div>
 						</li>
 						<li class="nav-item mx-2">
-							<a class="nav-link font-weight-bold" href="../controller/index.php?action=about">GIỚI THIỆU</a>
+							<a class="nav-link font-weight-bold" style="<?php if($_GET['action'] == 'about') echo ' color: rgba(0,0,0,.9);'; ?>" href="../controller/index.php?action=about">GIỚI THIỆU</a>
 						</li>
 						<li class="nav-item mx-2">
-							<a class="nav-link font-weight-bold" href="../controller/index.php?action=news">TIN TỨC</a>
+							<a class="nav-link font-weight-bold" style="<?php if($_GET['action'] == 'news') echo ' color: rgba(0,0,0,.9);'; ?>" href="../controller/index.php?action=news">TIN TỨC</a>
 						</li>
 						<li class="nav-item mx-2">
-							<a class="nav-link font-weight-bold" href="../controller/index.php?action=contact">LIÊN HỆ</a>
+							<a class="nav-link font-weight-bold" style="<?php if($_GET['action'] == 'contact') echo ' color: rgba(0,0,0,.9);'; ?>" href="../controller/index.php?action=contact">LIÊN HỆ</a>
 						</li>
 					</ul>
 				</div>

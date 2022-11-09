@@ -1,43 +1,43 @@
 <title>Trang chủ</title>
     <main>
         <div id="top_img_home">
-            <img src="img/home/slider_1.webp" alt="">
+            <img src="https://theme.hstatic.net/200000280801/1000673816/14/slider_1.jpg?v=17" alt="">
         </div>
         <div id="nav_product_home" class="container">
             <div class="row">
                 <div class="col-6 col-lg-2 col-md-4 nav_item_product_home">
-                    <a href="" class="d-block text-center">
-                        <img src="img/home/036-sofa-1.webp" alt="">    
+                    <a href="../controller/index.php?action=product&category_id=1" class="d-block text-center">
+                        <img src="https://file.hstatic.net/200000280801/collection/036-sofa-1_a7ebdf06ace04ea89ca902476cb22632.png" alt="">    
                         <p>Sofa</p>
                     </a>
                 </div>
                 <div class="col-6 col-lg-2 col-md-4 nav_item_product_home">
-                    <a href="" class="d-block text-center">
-                        <img src="img/home/043-chair-2.webp" alt="">    
+                    <a href="../controller/index.php?action=product&category_id=2" class="d-block text-center">
+                        <img src="https://file.hstatic.net/200000280801/collection/043-chair-2_5167b889e218465fba9faf07bdb7dc19.png" alt="">    
                         <p>Ghế</p>
                     </a>
                 </div>
                 <div class="col-6 col-lg-2 col-md-4 nav_item_product_home">
-                    <a href="" class="d-block text-center">
-                        <img src="img/home/022-lamp.webp" alt="">    
+                    <a href="../controller/index.php?action=product&category_id=3" class="d-block text-center">
+                        <img src="https://file.hstatic.net/200000280801/collection/022-lamp_82b4234113484b53b4ee0a1a8504d1de.png" alt="">    
                         <p>Trang trí</p>
                     </a>
                 </div>
                 <div class="col-6 col-lg-2 col-md-4 nav_item_product_home">
-                    <a href="" class="d-block text-center">
-                        <img src="img/home/012-shelf.webp" alt="">    
+                    <a href="../controller/index.php?action=product&category_id=4" class="d-block text-center">
+                        <img src="https://file.hstatic.net/200000280801/collection/012-shelf_7e79d57824b345d0ba184f7e8c0c9a23.png" alt="">    
                         <p>Kệ sách</p>
                     </a>
                 </div>
                 <div class="col-6 col-lg-2 col-md-4 nav_item_product_home">
-                    <a href="" class="d-block text-center">
-                        <img src="img/home/006-table-1.webp" alt="">    
+                    <a href="../controller/index.php?action=product&category_id=5" class="d-block text-center">
+                        <img src="https://file.hstatic.net/200000280801/collection/006-table-1_ad853cf4b5ab4d919552e0fc67e52ff8.png" alt="">    
                         <p>Bàn</p>
                     </a>
                 </div>
                 <div class="col-6 col-lg-2 col-md-4 nav_item_product_home">
-                    <a href="" class="d-block text-center">
-                        <img src="img/home/050-closet.webp" alt="">    
+                    <a href="../controller/index.php?action=product&category_id=6" class="d-block text-center">
+                        <img src="https://file.hstatic.net/200000280801/collection/050-closet_74974ddd24a34029bfeaf0eed1d90304.png" alt="">    
                         <p>Tủ quần áo</p>
                     </a>
                 </div>
