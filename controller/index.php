@@ -1,4 +1,5 @@
 <?php 
+    ob_start();
     session_start();
     include '../view/header.php'; 
     include '../model/handle_function.php';
@@ -17,7 +18,7 @@
                     echo '<script language="javascript">';
                     echo 'alert("Đăng nhập thành công !");'; 
                     echo '</script>';
-                    echo "<script>window.location.href='index.php?action=home'</script>";
+                    header("Location: ?action=home");
                 }else if($status_login == 'fail'){
                     echo '<script language="javascript">';
                     echo 'alert("Đăng nhập thất bại !");'; 
@@ -27,7 +28,7 @@
                 break;
             case 'logout':
                 include '../view/logout.php';
-                echo "<script>window.location.href='index.php?action=home'</script>";
+                header("Location: ?action=home");
                 break;
             case 'news':
                 include '../view/news.php';
@@ -61,6 +62,24 @@
             case 'cart':
                 include '../view/cart.php';
                 break;
+            case 'product':
+                //ham xu ly
+                $product = choose_category_id();
+                include '../model/PDOconnect.php';
+                
+                $sql = "select * from category where id = ?";
+                $stmt = $conn -> prepare($sql);
+                if($_GET['category_id'] == 'all'){
+                    $name_category = 'TẤT CẢ SẢN PHẨM';
+                }else{
+                    $stmt -> execute([$_GET['category_id']]);
+                
+                    $name_category = $stmt->fetch()['category_name'];
+                }
+            
+                
+                include '../view/product.php';
+                break;
             default:
                 include '../view/home.php';
                 break;
@@ -70,4 +89,5 @@
     }
     
     include '../view/footer.php'; 
+    ob_end_flush();
 ?>
