@@ -55,12 +55,20 @@
                         echo '<script language="javascript">';
                         echo 'alert("Đăng kí tài khoản thành công ! Hãy tiến hành đăng nhập !");'; 
                         echo '</script>';
-                        break;
                 }
                 include '../view/register.php';
                 break;
             case 'cart':
+                add_to_cart();
+                if(isset($_SESSION['cart'])){
+                    $product_at_cart = $_SESSION['cart'];
+                }
                 include '../view/cart.php';
+                break;
+
+            case 'delete_cart':
+                unset($_SESSION['cart'][$_GET['id_product_in_cart']]);
+                header("Location: ?action=cart");
                 break;
             case 'product':
                 //ham xu ly
@@ -69,13 +77,16 @@
                 
                 $sql = "select * from category where id = ?";
                 $stmt = $conn -> prepare($sql);
-                if($_GET['category_id'] == 'all'){
-                    $name_category = 'TẤT CẢ SẢN PHẨM';
-                }else{
-                    $stmt -> execute([$_GET['category_id']]);
-                
-                    $name_category = $stmt->fetch()['category_name'];
+                if(isset($_GET['category_id'])){
+                    if($_GET['category_id'] == 'all'){
+                        $name_category = 'TẤT CẢ SẢN PHẨM';
+                    }else{
+                        $stmt -> execute([$_GET['category_id']]);
+                    
+                        $name_category = $stmt->fetch()['category_name'];
+                    }
                 }
+                
                 include '../view/product.php';
                 break;
             case 'detail_product': 
@@ -90,7 +101,6 @@
         
                     $name_of_category=$stmt->fetch()['category_name'];
                 }
-
                 include '../view/detail_product.php';
                 break;  
             default:

@@ -695,3 +695,32 @@ footer{
     border: 1px solid rgb(247, 148, 29);
     border-radius: 4px;
 }
+
+/* --------------------------------------------- */
+/* order_success */
+#main_of_order_success{
+    background-color: #e6e8e3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#icon_check_order_success{
+    border: 3px solid #8fc445;
+    border-radius: 50%;
+}
+
+#shipment_details{
+    border: 1px solid #dadada;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+#shipment_details h4{
+    font-weight: 600;
+}
+
+#card_body_order_success img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}

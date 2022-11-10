@@ -47,13 +47,13 @@
             <div class="row">
                 <div class="col-md-4 text-center mb-2 hotsale_product_home">
                     <p class="label_hotsale_home">HOT</p>
-                    <a href="" class="d-block">
+                    <a href="../controller/index.php?action=detail_product&id_product=1" class="d-block">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/2-042bbb81b1b64e5287a9a94736f714bf-master.jpg?v=1566961266000" alt="">
                     </a>
                     <p class="mt-4">
-                        <a href="" style="font-size: 16px; text-decoration: none; color: black;" class="font-weight-bolder">Ghế Luxury</a>
+                        <a href="../controller/index.php?action=detail_product&id_product=1" style="font-size: 16px; text-decoration: none; color: black;" class="font-weight-bolder">Ghế Luxury</a>
                     </p>
-                    <p><a href="" style="font-size: 15px; text-decoration: none; color: rgb(84, 88, 92);">LUXURY</a></p>
+                    <p><a href="../controller/index.php?action=detail_product&id_product=1" style="font-size: 15px; text-decoration: none; color: rgb(84, 88, 92);">LUXURY</a></p>
                     <p style="font-size: 20px; color: rgb(247,148,29); font-weight: 800;">570.000đ</p>
                 </div>
                 <div class="col-md-8">
@@ -62,38 +62,38 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=1" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/2-042bbb81b1b64e5287a9a94736f714bf-master.jpg?v=1566961266000" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Ghế Luxury</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=1" class="d-block text-center mt-3 featured_item_name_home">Ghế Luxury</a>
                             <p class="text-center featured_item_price_home">570.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=3" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/g-2-master.jpg?v=1566961002770" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Ghế Woody</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=3" class="d-block text-center mt-3 featured_item_name_home">Ghế Woody</a>
                             <p class="text-center featured_item_price_home">900.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=5" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/2-e75ada50bdb54ea99d0db5af778c40bb-master.jpg?v=1566960755693" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Ghế Euro</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=5" class="d-block text-center mt-3 featured_item_name_home">Ghế Euro</a>
                             <p class="text-center featured_item_price_home">960.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=10" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/hobu-d-1-da4001c724d64bbba3caa56ed2be6a6e-master.png?v=1566960379253" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Kệ đẩy Hobu</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=10" class="d-block text-center mt-3 featured_item_name_home">Kệ đẩy Hobu</a>
                             <p class="text-center featured_item_price_home">780.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=7" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/sun-1-1a59cc92352c4428b72773c291f838b1-master.png?v=1566958876783" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Đồng hồ Miso Limited</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=7" class="d-block text-center mt-3 featured_item_name_home">Đồng hồ Miso Limited</a>
                             <p class="text-center featured_item_price_home">1.200.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
@@ -114,10 +114,10 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=3" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/g-2-master.jpg?v=1566961002770" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Ghế Woody</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=3" class="d-block text-center mt-3 featured_item_name_home">Ghế Woody</a>
                             <p class="text-center featured_item_price_home">900.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
@@ -128,10 +128,10 @@
                             <p class="text-center featured_item_price_home">800.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=12" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/t-g-2-master.jpg?v=1566942776260" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Bàn Aillen 02</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=12" class="d-block text-center mt-3 featured_item_name_home">Bàn Aillen 02</a>
                             <p class="text-center featured_item_price_home">680.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
@@ -180,10 +180,10 @@
                 </div>
                 <div class="row">
                     <div class="col-6 col-md-3 featured_item_home">
-                        <a href="" class="d-block">
+                        <a href="../controller/index.php?action=detail_product&id_product=4" class="d-block">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/profile-ghebee-den-xeo-56ae996c8c7b4fb0826bc671eb5742d9-master.png?v=1566960921607" alt="">
                         </a>
-                        <a href="" class="d-block text-center mt-3 featured_item_name_home">Ghế Euro 2</a>
+                        <a href="../controller/index.php?action=detail_product&id_product=4" class="d-block text-center mt-3 featured_item_name_home">Ghế Euro 2</a>
                         <p class="text-center featured_item_price_home">750.000đ</p>
                     </div>
                     <div class="col-6 col-md-3 featured_item_home">
@@ -194,10 +194,10 @@
                         <p class="text-center featured_item_price_home">400.000đ</p>
                     </div>
                     <div class="col-6 col-md-3 featured_item_home">
-                        <a href="" class="d-block">
+                        <a href="../controller/index.php?action=detail_product&id_product=2" class="d-block">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/ghe-hong-cheo-30f7d63900384e489ee1e06c11186f3d-master.jpg?v=1566961050973" alt="">
                         </a>
-                        <a href="" class="d-block text-center mt-3 featured_item_name_home">Ghế Woody Pinky</a>
+                        <a href="../controller/index.php?action=detail_product&id_product=2" class="d-block text-center mt-3 featured_item_name_home">Ghế Woody Pinky</a>
                         <p class="text-center featured_item_price_home">1.250.000đ</p>
                     </div>
                     <div class="col-6 col-md-3 featured_item_home">
