@@ -3,7 +3,7 @@
     session_start();
     include '../view/header.php'; 
     include '../model/handle_function.php';
-
+    define('PATH_TO_CONNECT','../model/PDOconnect.php');
     if(isset($_GET['action'])) {
         switch ($_GET['action']){ 
             case 'about':
@@ -76,10 +76,23 @@
                 
                     $name_category = $stmt->fetch()['category_name'];
                 }
-            
-                
                 include '../view/product.php';
                 break;
+            case 'detail_product': 
+                $detail_product=get_detail_product(); 
+                // $name_of_category=get_category_product();
+                include PATH_TO_CONNECT;
+                if(isset($_GET['id_product'])){
+                    $id_of_product=$_GET['id_product'];
+                    $sql='select * from category c join product p on c.id=p.category_id where p.id=?';
+                    $stmt = $conn -> prepare($sql);
+                    $stmt ->  execute([$id_of_product]);
+        
+                    $name_of_category=$stmt->fetch()['category_name'];
+                }
+
+                include '../view/detail_product.php';
+                break;  
             default:
                 include '../view/home.php';
                 break;

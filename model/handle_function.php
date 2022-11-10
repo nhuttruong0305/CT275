@@ -11,11 +11,11 @@
         include_once(__DIR__ . '.\PDOconnect.php');
         $status_process = '';
         if(isset($_POST['btn_register'])){
-            if(isset($_POST['full_name']) && isset($_POST['email']) && isset($_POST['number_phone']) && isset($_POST['password']) && isset($_POST['confirm_password'])){
-                $full_name = $_POST['full_name'];
+            if(isset($_POST['fullname']) && isset($_POST['email']) && isset($_POST['number_phone']) && isset($_POST['password']) && isset($_POST['confirm_password'])){
+                $full_name = $_POST['fullname'];
                 $email = $_POST['email'];
                 $number_phone = $_POST['number_phone'];
-                $password = $_POST['pass_word'];
+                $password = $_POST['password'];
                 $confirm_password = $_POST['confirm_password'];
 
                 if(check_exist_email($email, $conn) > 0){
@@ -41,17 +41,16 @@
         if(isset($_POST['btn_login'])){
             if(isset($_POST['email']) && isset($_POST['password'])){
 
-
                 $email = $_POST['email'];
                 $password = $_POST['password'];
 
                 $sql = "select * from account where email = ? and pass_word = ?";
                 $stmt = $conn -> prepare($sql);
                 $stmt->execute([$email, $password]);
-
-                $full_name = $stmt->fetch()['full_name'];
-
+                
                 if($stmt->rowCount() > 0){
+                    $full_name = $stmt->fetch()['full_name'];
+
                     $status_process = 'success';
                     if(isset($_POST['remember_login']) && ($_POST['remember_login'])){
                         setcookie("remember_login", $full_name, time() + 3600);
@@ -91,4 +90,31 @@
         }
     }
 
-  
+    function get_detail_product(){
+        include_once(__DIR__ . '.\PDOconnect.php');
+        if(isset($_GET['id_product'])){
+            $id_of_product=$_GET['id_product'];
+            $sql='select * from product where id=?';
+            $stmt = $conn -> prepare($sql);
+            $stmt ->  execute([$id_of_product]);
+
+            $detail_product=$stmt->fetch();
+            $conn = null;
+            return $detail_product;
+        }
+    }
+
+    // function get_category_product(){
+    //     include_once(__DIR__ . '.\PDOconnect.php');
+
+    //     if(isset($_GET['id_product'])){
+    //         $id_of_product=$_GET['id_product'];
+    //         $sql='select category_name from category c join product p on c.id=p.category_id where p.id=?';
+    //         $stmt = $conn -> prepare($sql);
+    //         $stmt ->  execute([$id_of_product]);
+
+    //         $name_of_category=$stmt->fetch();
+    //         $conn=null;
+    //         return $name_of_category;
+    //     }
+    // }
