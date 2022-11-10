@@ -48,7 +48,7 @@
                 <div class="col-md-4 text-center mb-2 hotsale_product_home">
                     <p class="label_hotsale_home">HOT</p>
                     <a href="" class="d-block">
-                        <img src="img/home/hot.webp" alt="">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/2-042bbb81b1b64e5287a9a94736f714bf-master.jpg?v=1566961266000" alt="">
                     </a>
                     <p class="mt-4">
                         <a href="" style="font-size: 16px; text-decoration: none; color: black;" class="font-weight-bolder">Ghế Luxury</a>
