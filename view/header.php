@@ -60,7 +60,7 @@
 							<a class="nav-link font-weight-bold" style="<?php if($_GET['action'] == 'home') echo ' color: rgba(0,0,0,.9) !important;'; ?> ;color:rgba(0,0,0,.5);" href="../controller/index.php?action=home">TRANG CHỦ <span class="sr-only"></span></a>
 						</li>
 						<li class="nav-item dropdown mx-2">
-							<a id="product_portfolio"  style="<?php if($_GET['action'] == 'product') echo 'color: rgba(0,0,0,.9);'; ?>" class="nav-link dropdown-toggle font-weight-bold" href="../controller/index.php?action=product" role="button" data-toggle="dropdown" aria-expanded="true">
+							<a id="product_portfolio"  style="<?php if($_GET['action'] == 'product') echo 'color: rgba(0,0,0,.9);'; ?>" class="nav-link dropdown-toggle font-weight-bold" href="../controller/index.php?action=product&category_id=all" role="button" data-toggle="dropdown" aria-expanded="true">
 								SẢN PHẨM
 							</a>
 							<div class="dropdown-menu" id="dropdown_container">

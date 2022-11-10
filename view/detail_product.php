@@ -25,13 +25,14 @@
                 <p id="price_detail_product" class="text-center"><span><?php echo $detail_product['price'];?></span></p>
                 <p id="des_detail_product"><?php echo $detail_product['description'];?></p>
                 <hr>
-                <form id="form_add_into_cart" method="post" class="row mt-5">
+                <form id="form_add_into_cart" method="post" class="row mt-5" action="?action=cart">
                     <div class="col-3">
-                        <label for="amount_product" style="color: rgb(247, 148, 29); font-size: 16px; font-weight: 600;">Số lượng</label>
+                        <label for="amount_product" style="color: rgb(247, 148, 29); font-size: 16px; font-weight: 600;" >Số lượng</label>
                     </div>    
                     <div class="col-9">
-                        <input type="number" id="amount_product" name="amount_product" class="col-7 mx-sm-3" min="1">
+                        <input type="number" id="amount_product" class="col-7 mx-sm-3" min="1" name="quantity">
                     </div>
+                    <input type="hidden" name="id_product" value="<?php echo $detail_product['id'];?>">
                     <button type="submit" id="add_into_cart" name="add_into_cart" class="btn">Thêm vào giỏ hàng</button>
                 </form>
                 <p class="font-weight-bolder">Gọi đặt mua: <span style="color: rgb(247,148,29);">19006750</span> (Miễn phí, 8-21h cả T7,CN)</p>

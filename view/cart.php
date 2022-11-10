@@ -4,13 +4,12 @@
             <p class="text-center" id="title-page">Giỏ hàng của bạn - Luxenus Furniture</p>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center" id="bread-crumb">
-                    <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="../controller/index.php?action=home">Trang chủ</a></li>
                     <li class="breadcrumb-item active" style="color: rgb(247, 148, 29); font-weight: 600;" aria-current="page">Giỏ hàng của bạn - Luxenus Furniture</li>
                 </ol>
             </nav>
         </div>
         <h3 style="font-weight: 700;" class="container">Giỏ hàng của bạn</h3>
-
         <div id="cart_container" class="container">
             <div id="div_tag_cover_table_cart" class="table-responsive-xl">
                 <table class="table table-borderless">
@@ -24,33 +23,33 @@
                             <th scope="col">Thành tiền</th>
                         </tr>
                     </thead>
+               
                     <tbody id="tbody_cart" class="text-center">
-                        <tr>
-                            <td style="padding-top: 60px;">
-                                <a href=""><i class="fas fa-eraser"></i></a>
-                            </td>
-                            <td><img style="width: 120px; height: auto;" src="https://bizweb.dktcdn.net/thumb/compact/100/364/402/products/2-acaf4822a6e84c0bad48378c37346e92-master.jpg" alt=""></tdscope=>
-                            <td style="padding-top: 60px;">Ghế Luxury</td>
-                            <td style="padding-top: 60px;">570.000</td>
-                            <td style="padding-top: 60px;">1</td>
-                            <td style="padding-top: 60px;">570.000</td>
-                        </tr>
-                        <tr>
-                            <td style="padding-top: 60px;">
-                                <a href=""><i class="fas fa-eraser"></i></a>
-                            </td>
-                            <td><img style="width: 120px; height: auto;" src="https://bizweb.dktcdn.net/thumb/compact/100/364/402/products/2-acaf4822a6e84c0bad48378c37346e92-master.jpg" alt=""></tdscope=>
-                            <td style="padding-top: 60px;">Ghế Mambo</td>
-                            <td style="padding-top: 60px;">1.270.000</td>
-                            <td style="padding-top: 60px;">1</td>
-                            <td style="padding-top: 60px;">1.200.000</td>
-                        </tr>
+                        <?php if(isset($product_at_cart)){
+                                $total = 0;
+                                foreach($product_at_cart as $id => $value){$total+=$value['price']*$value['quantity'];?>
+                                    <tr>
+                                        <td style="padding-top: 60px;">
+                                            <a href="?action=delete_cart&id_product_in_cart=<?php echo $id?>"><i class="fas fa-eraser"></i></a>
+                                        </td>
+                                        <td> <?php echo '<img style="width: 120px; height: auto;" src="'.$value['img'].'" alt="">'; ?></tdscope=>    
+                                        
+                                        <td style="padding-top: 60px;">
+                                            <?php echo $value['product_name'];?>
+                                        </td>
+                                        <td style="padding-top: 60px;">
+                                            <?php echo number_format($value['price'],0,'','.'). " đ";?>
+                                        </td>
+                                        <td style="padding-top: 60px;"><?php echo $value['quantity']; ?></td>
+                                        <td style="padding-top: 60px;"><?php echo number_format($value['quantity']*$value['price'],0,'','.'). " đ"; ?></td>
+                                    </tr>
+                        <?php }};?>
                         <tr>
                             <td></td>
                             <td></td>
                             <td colspan="3"><h4 class="text-right">Tổng số thành tiền: </h4></td>
                             <td>
-                                <h4 class="text-warning">460,000 đ</h4>
+                                <h4 class="text-warning"><?php if(isset($total)){echo  number_format($total,0,'','.')." đ";} else echo '0 đ';?></h4>
                             </td>
                         </tr>
                     </tbody>
