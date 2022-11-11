@@ -45,7 +45,10 @@
 
 				<a class="mx-3" href="../controller/index.php?action=cart" id="cart">
 					<i class="fas fa-dolly" style="color: rgb(247,148,29);"></i>
-					<span id="count_product">2</span>
+					<span id="count_product"><?php if(isset($_SESSION['cart'])){
+														echo count($_SESSION['cart']);
+													}else{echo "0";}?>
+					</span>
 				</a>
 			</div>
 		</div>

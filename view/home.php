@@ -87,7 +87,7 @@
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/hobu-d-1-da4001c724d64bbba3caa56ed2be6a6e-master.png?v=1566960379253" alt="">
                             </a>
                             <a href="../controller/index.php?action=detail_product&id_product=10" class="d-block text-center mt-3 featured_item_name_home">Kệ đẩy Hobu</a>
-                            <p class="text-center featured_item_price_home">780.000đ</p>
+                            <p class="text-center featured_item_price_home">750.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
                             <a href="../controller/index.php?action=detail_product&id_product=7" class="d-block">
