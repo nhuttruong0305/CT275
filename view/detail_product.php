@@ -22,7 +22,7 @@
                 <h1 id="title_name_detail_product"><?php echo $detail_product['product_name'];?></h1>
                 <p id="brand_detail_product"><?php echo $detail_product['brand'];?></p>
                 <i class="fas fa-ellipsis-h"></i>
-                <p id="price_detail_product" class="text-center"><span><?php echo $detail_product['price'];?></span></p>
+                <p id="price_detail_product" class="text-center"><span><?php echo number_format($detail_product['price'],0,'','.'). " đ";?></span></p>
                 <p id="des_detail_product"><?php echo $detail_product['description'];?></p>
                 <hr>
                 <form id="form_add_into_cart" method="post" class="row mt-5" action="?action=cart">
@@ -30,7 +30,7 @@
                         <label for="amount_product" style="color: rgb(247, 148, 29); font-size: 16px; font-weight: 600;" >Số lượng</label>
                     </div>    
                     <div class="col-9">
-                        <input type="number" id="amount_product" class="col-7 mx-sm-3" min="1" name="quantity">
+                        <input type="number" id="amount_product" class="col-7 mx-sm-3" min="1" name="quantity" value="1">
                     </div>
                     <input type="hidden" name="id_product" value="<?php echo $detail_product['id'];?>">
                     <button type="submit" id="add_into_cart" name="add_into_cart" class="btn">Thêm vào giỏ hàng</button>

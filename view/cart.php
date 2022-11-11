@@ -40,7 +40,11 @@
                                         <td style="padding-top: 60px;">
                                             <?php echo number_format($value['price'],0,'','.'). " đ";?>
                                         </td>
-                                        <td style="padding-top: 60px;"><?php echo $value['quantity']; ?></td>
+                                        <td style="padding-top: 60px;">
+                                            <a href="?action=change_quantity&type=decrease&quantity=<?php echo $value['quantity']?>&id=<?php echo $id?>">-</a>
+                                            <?php echo $value['quantity']; ?>
+                                            <a href="?action=change_quantity&type=increase&quantity=<?php echo $value['quantity']?>&id=<?php echo $id?>">+</a>
+                                        </td>
                                         <td style="padding-top: 60px;"><?php echo number_format($value['quantity']*$value['price'],0,'','.'). " đ"; ?></td>
                                     </tr>
                         <?php }};?>
@@ -92,8 +96,8 @@
                 <label for="payments_customer_cart" class="col-sm-3 col-form-label align-items-center">Thanh toán</label>
                 <div class="col-sm-9">
                     <select id="payments_customer_cart" class="custom-select custom-select-md mb-3" name="payments_customer_cart" required>
-                        <option selected>Hình thức thanh toán</option>
-                        <option value="Thanh toán khi nhận hàng (COD)">Thanh toán khi nhận hàng (COD)</option>
+                        <option >Hình thức thanh toán</option>
+                        <option value="Thanh toán khi nhận hàng (COD)" selected>Thanh toán khi nhận hàng (COD)</option>
                         <option value="Thanh toán chuyển khoản (Internet Banking)">Thanh toán chuyển khoản (Internet Banking)</option>
                         <option value="Thanh toán qua thẻ tín dụng">Thanh toán qua thẻ tín dụng</option>
                     </select>    

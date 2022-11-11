@@ -7,7 +7,7 @@
                         <div id="icon_check_order_success" class="col-2 d-flex align-items-center justify-content-center"><i style="font-size: 40px; color: #8fc445;" class="fas fa-check d-block"></i></div>
                         <div class="col-10">
                             <h5 style="font-weight: 700;">Cảm ơn bạn đã đặt hàng</h5>
-                            <p>Một email xác nhận đã được gửi tới truong.lnt123@gmail.com. Xin vui lòng kiểm tra email của bạn</p>
+                            <p>Một email xác nhận đã được gửi tới <span class="font-weight-bold"><?php if(isset($_POST['email_customer_cart'])) echo $_POST['email_customer_cart'];?></span> Xin vui lòng kiểm tra email của bạn</p>
                         </div>
                     </div>
                     <div id="shipment_details" class="row mt-3">
@@ -48,7 +48,7 @@
                                     <img src="<?php echo $value_success['img'];?>" alt="">
                                     <span><?php echo $value_success['product_name'];?></span>
                                 </div>
-                                <p><?php echo $value_success['price']*$value_success['quantity'];?></p>
+                                <p><?php echo number_format($value_success['price']*$value_success['quantity'],0,'','.')." đ"?></p>
                             </div>
                             <hr>
                         </div>
