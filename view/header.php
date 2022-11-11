@@ -26,9 +26,11 @@
 		<div class="row align-items-center">
 			<div class="col-md-3 my-3"><img style="width: 100%;" src="../view/img/LUXENUS FURNITURE.png" alt=""></div>
 			<div class="col-md-5 my-3">
-				<form id="form_search" action="" method="get" class="d-flex justify-content-center align-items-center">
-					<input class="d-inline-block" type="text" id="input_product" placeholder="Nhập từ khóa tìm kiếm ...">
-					<button id="search_btn" type="submit" class="btn"><i class="fas fa-search"></i></button>
+				<form id="form_search" action="#" method="get" class="d-flex justify-content-center align-items-center">
+					<input class="d-inline-block" type="text" id="input_product" placeholder="Nhập từ khóa tìm kiếm ..." name="search_product">
+					<button id="search_btn" type="submit" class="btn">
+						<i class="fas fa-search"></i>
+					</button>
 				</form>
 			</div>
 			<div id="account_cart" class="col-md-4 d-flex my-3 justify-content-center">

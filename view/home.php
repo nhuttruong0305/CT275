@@ -97,10 +97,10 @@
                             <p class="text-center featured_item_price_home">1.200.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=27" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/30-do-trang-8a897fc42fea4bcdbe3b5cb829f3b883-master.jpg?v=1566960321110" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Kệ treo Polar</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=27" class="d-block text-center mt-3 featured_item_name_home">Kệ treo Polar</a>
                             <p class="text-center featured_item_price_home">500.000đ</p>
                         </div>
                     </div>
@@ -121,10 +121,10 @@
                             <p class="text-center featured_item_price_home">900.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=28" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/4-0717adb7481649d18ceade5adc9c6d4a-master.png?v=1566943025980" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Sofa đơn ALICE</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=28" class="d-block text-center mt-3 featured_item_name_home">Sofa đơn ALICE</a>
                             <p class="text-center featured_item_price_home">800.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
@@ -135,24 +135,24 @@
                             <p class="text-center featured_item_price_home">680.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=29" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/2-b2c68ff5ef6047f4b8d748d2a974ba8d-master.jpg?v=1566942315320" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Bàn Binas</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=29" class="d-block text-center mt-3 featured_item_name_home">Bàn Binas</a>
                             <p class="text-center featured_item_price_home">890.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=30" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/aurora-nghieng-light-grey-3d8bccf563ad4415aaabe620924f3fd6-master.png?v=1566942968600" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Sofa giường AURORA</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=30" class="d-block text-center mt-3 featured_item_name_home">Sofa giường AURORA</a>
                             <p class="text-center featured_item_price_home">3.000.000đ</p>   
                         </div>
                         <div class="col-md-4 col-6 featured_item_home">
-                            <a href="" class="d-block">
+                            <a href="../controller/index.php?action=detail_product&id_product=31" class="d-block">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/den-30-do-d9f9e88fd07c483b99859b9df1bf7058-master.jpg?v=1566941959460" alt="">
                             </a>
-                            <a href="" class="d-block text-center mt-3 featured_item_name_home">Bàn ARABICA</a>
+                            <a href="../controller/index.php?action=detail_product&id_product=31" class="d-block text-center mt-3 featured_item_name_home">Bàn ARABICA</a>
                             <p class="text-center featured_item_price_home">600.000đ</p>   
                         </div>
                     </div>
@@ -187,10 +187,10 @@
                         <p class="text-center featured_item_price_home">750.000đ</p>
                     </div>
                     <div class="col-6 col-md-3 featured_item_home">
-                        <a href="" class="d-block">
+                        <a href="../controller/index.php?action=detail_product&id_product=32" class="d-block">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/tv-d-1-master.png?v=1566960438187" alt="">
                         </a>
-                        <a href="" class="d-block text-center mt-3 featured_item_name_home">Kệ tivi HOBU</a>
+                        <a href="../controller/index.php?action=detail_product&id_product=32" class="d-block text-center mt-3 featured_item_name_home">Kệ tivi HOBU</a>
                         <p class="text-center featured_item_price_home">400.000đ</p>
                     </div>
                     <div class="col-6 col-md-3 featured_item_home">
@@ -201,10 +201,10 @@
                         <p class="text-center featured_item_price_home">1.250.000đ</p>
                     </div>
                     <div class="col-6 col-md-3 featured_item_home">
-                        <a href="" class="d-block">
+                        <a href="../controller/index.php?action=detail_product&id_product=33" class="d-block">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/bella-1m5-xanh-b5ab68ddc5a44d678003f1b53a33cb31-master.png?v=1566943226947" alt="">
                         </a>
-                        <a href="" class="d-block text-center mt-3 featured_item_name_home">Sofa BELLA</a>
+                        <a href="../controller/index.php?action=detail_product&id_product=33" class="d-block text-center mt-3 featured_item_name_home">Sofa băng BELLA</a>
                         <p class="text-center featured_item_price_home">2.200.000đ</p>
                     </div>
                 </div>

@@ -12,6 +12,23 @@
             case 'contact':
                 include '../view/contact.php';
                 break;  
+            case 'search_product':
+                $result_search_product  = search_product();
+                include '../model/PDOconnect.php';
+                
+                $sql = "select * from category where id = ?";
+                $stmt = $conn -> prepare($sql);
+                if(isset($_GET['category_id'])){
+                    if($_GET['category_id'] == 'all'){
+                        $name_category = 'TẤT CẢ SẢN PHẨM';
+                    }else{
+                        $stmt -> execute([$_GET['category_id']]);
+                    
+                        $name_category = $stmt->fetch()['category_name'];
+                    }
+                }
+                include '../view/search.php';
+                break;
             case 'login':    
                 $status_login = login_process();
                 if($status_login == 'success'){
@@ -137,7 +154,19 @@
                 }
                 header("Location: ?action=home");
                 break;
+            case 'change_quantity':
+                if(isset($_GET['type']) && isset($_GET['quantity'])&& isset($_GET['id'])){
+                    $quantity = change_quantity_product($_GET['type'], $_GET['quantity']);
+                    $_SESSION['cart'][$_GET['id']]['quantity'] = $quantity;
+                    header("Location: ?action=cart");
+                }
+                    
+                include '../view/cart.php';
+                break;
             default:
+                if(isset($_GET['search_product'])){
+                    header("Location: ?action=search_product&search_key=".$_GET['search_product']);
+                }
                 include '../view/home.php';
                 break;
         }
