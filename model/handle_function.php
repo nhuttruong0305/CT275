@@ -60,8 +60,12 @@
                         $status_process = 'success';
                         if(isset($_POST['remember_login']) && ($_POST['remember_login'])){
                             setcookie("remember_login", $full_name, time() + 3600);
+                            $_SESSION['email_customer'] = $result_from_DB['email'];
+                            $_SESSION['phone_number'] = $result_from_DB['phone_number'];
                         }else{
-                            $_SESSION['login_success'] = $full_name; 
+                            $_SESSION['login_success'] = $full_name;
+                            $_SESSION['email_customer'] = $result_from_DB['email'];
+                            $_SESSION['phone_number'] = $result_from_DB['phone_number'];    
                         }
                     } else{
                         $status_process = 'fail';
@@ -128,23 +132,38 @@
                     $stmt->execute([$id_product]);
                     $result = $stmt -> fetch();
 
+                    
                     //$_SESSION['cart'][$id_product] = $id_product;
                     $_SESSION['cart'][$id_product]['img'] = $result['img'];
                     $_SESSION['cart'][$id_product]['product_name'] = $result['product_name'];
                     $_SESSION['cart'][$id_product]['price'] = $result['price'];
                     $_SESSION['cart'][$id_product]['quantity'] = $soluong_SP;
+
+                    // if(isset($count_the_number_of_products)){
+                    //     global $count_the_number_of_products;
+                    //     $count_the_number_of_products=count($_SESSION['cart']);
+                    // }
+
+                    header("Location:../controller/index.php?action=cart");
                 }
             }
         }
     }
 
-    // function delete_cart(){
-    //     if(isset($_GET['id_product_in_cart'])){
-    //         $id = $_GET['id_product_in_cart'];
-    //         unset($_SESSION['cart'][$id]);
-    //     }
-    // }
-
-
-
+    function create_order(){
+        include_once(__DIR__ . '.\PDOconnect.php');
+        if(isset($_POST['agree_to_order'])){
+            if(isset($_POST['name_customer_cart']) && isset($_POST['email_customer_cart']) && isset($_POST['sdt_customer_cart']) && isset($_POST['address_customer_cart']) && isset($_POST['payments_customer_cart']) && isset($_POST['total_order'])){
+                
+                $sql="insert into orders (full_name,address,phone_number,email,total,payment) values(?,?,?,?,?,?)";
+                $stmt = $conn -> prepare($sql);
+                $stmt -> execute([$_POST['name_customer_cart'], $_POST['address_customer_cart'], $_POST['sdt_customer_cart'], $_POST['email_customer_cart'],$_POST['total_order'],$_POST['payments_customer_cart']]);
+                
+            }
+            //Trả về ID cuối cùng được thêm vào bảng orders
+            return $conn->lastInsertID();
+            $conn= null;
+        }
+    }
+?>
 

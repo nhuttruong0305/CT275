@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="../view/css/style.css" type="text/css">
-    <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>
-    <title>Thanh toán thành công</title>
+<title>Thanh toán thành công</title>
     <main id="main_of_order_success">
         <div class="container">
             <div class="row">
@@ -28,18 +13,18 @@
                     <div id="shipment_details" class="row mt-3">
                         <div class="col-md-6">
                             <h4>Thông tin mua hàng</h4>
-                            <p>Lê Nhựt Trường</p>
-                            <p>truong.lnt123@gmail.com</p>
-                            <p>0966899548</p>
+                            <p><?php if(isset($_POST['name_customer_cart'])) echo $_POST['name_customer_cart'];?></p>
+                            <p><?php if(isset($_POST['email_customer_cart'])) echo $_POST['email_customer_cart'];?></p>
+                            <p><?php if(isset($_POST['sdt_customer_cart'])) echo $_POST['sdt_customer_cart'];?></p>
                         </div>
                         <div class="col-md-6">
                             <h4>Địa chỉ nhận hàng</h4>
-                            <p>Phường Nguyễn Trung Trực, Quận Ba Đình, Hà Nội</p>
-                            <p>Ghi chú: vào cổng quẹo phải ....</p>
+                            <p><?php if(isset($_POST['address_customer_cart'])) echo $_POST['address_customer_cart'];?></p>
+                            <p>Ghi chú: <?php if(isset($_POST['note_customer_cart'])) echo $_POST['note_customer_cart'];?></p>
                         </div>
                         <div class="col-md-6">
                             <h4>Phương thức thanh toán</h4>
-                            <p>Thanh toán khi nhận hàng (COD)</p>
+                            <p><?php if(isset($_POST['payments_customer_cart'])) echo $_POST['payments_customer_cart'];?></p>
                         </div>
                         <div class="col-md-6">
                             <h4>Phương thức vận chuyển</h4>
@@ -52,27 +37,26 @@
                         <div class="card-header">
                             Đơn hàng #031505
                         </div>
+
+                        <?php if(isset($product_in_order_success)){
+                            foreach($product_in_order_success as $id_success => $value_success){
+                        ?>
+
                         <div id="card_body_order_success" class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/2-e75ada50bdb54ea99d0db5af778c40bb-master.jpg?v=1566960755693" alt="">
-                                    <span>Ghế Euro 2</span>
+                                    <img src="<?php echo $value_success['img'];?>" alt="">
+                                    <span><?php echo $value_success['product_name'];?></span>
                                 </div>
-                                <p>750.000đ</p>
+                                <p><?php echo $value_success['price']*$value_success['quantity'];?></p>
                             </div>
                             <hr>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/2-e75ada50bdb54ea99d0db5af778c40bb-master.jpg?v=1566960755693" alt="">
-                                    <span>Ghế Euro 2</span>
-                                </div>
-                                <p>750.000đ</p>
-                            </div>
                         </div>
+                        <?php }};?>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between" style="padding-top: 26px;">
                                 <p>Tạm tính: </p>
-                                <p>150.000đ</p>
+                                <p><?php if(isset($_POST['total_order'])){echo number_format($_POST['total_order'],0,'','.')." đ";} ?></p>
                             </li>
                             <li class="list-group-item d-flex justify-content-between" style="padding-top: 26px;">
                                 <p>Phí vận chuyển: </p>
@@ -80,7 +64,7 @@
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center" style="padding-top: 26px;">
                                 <p>Tổng cộng: </p>
-                                <p style="font-size: 30px; color: rgb(0,0,132); font-weight: 600;">1.420.000đ</p>
+                                <p style="font-size: 30px; color: rgb(0,0,132); font-weight: 600;"><?php if(isset($_POST['total_order'])){echo number_format($_POST['total_order']+20000,0,'','.')." đ";}?></p>
                             </li>
                         </ul>
                       </div>
@@ -88,11 +72,10 @@
             </div>
             <hr>
             <div class="row justify-content-center">
-                <button class="btn btn-primary">Tiếp tục mua hàng</button>
+                <form action="index.php?action=delete_order" method='post'>
+                    <button class="btn btn-primary" name="continue_order">Tiếp tục mua hàng</button>
+                </form>
+                
             </div>
         </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-</body>
-</html>

@@ -63,6 +63,7 @@
                 if(isset($_SESSION['cart'])){
                     $product_at_cart = $_SESSION['cart'];
                 }
+                
                 include '../view/cart.php';
                 break;
 
@@ -103,6 +104,39 @@
                 }
                 include '../view/detail_product.php';
                 break;  
+            case 'agree_order':
+                if(isset($_SESSION['cart'])){
+                    $last_id_of_orders=create_order();
+                    $product_in_order_success = $_SESSION['cart'];
+                   
+                    //Vòng lặp thêm all sản phẩm vào orders_detail
+                    include PATH_TO_CONNECT;
+                    if(isset($_POST['agree_to_order'])){
+                        //$sql_success="insert into orders_detail(product_name, product_img, price, amount, thanhtien, id_orders) values (?,?,?,?,?,?)";
+                        $sql_success="insert into orders_detail(product_name, product_img, price, amount, thanhtien, id_orders) values (:product_name,:product_img,:price,:amount,:thanhtien,:id_orders)";
+                        $stmt_success=$conn->prepare($sql_success);
+                        foreach($product_in_order_success as $id_success => $value_success){
+                            $value_total = $value_success['price']*$value_success['quantity'];
+                            $stmt_success -> bindParam('product_name',$value_success['product_name']);
+                            $stmt_success -> bindParam('product_img', $value_success['img']);
+                            $stmt_success -> bindParam('price', $value_success['price']);
+                            $stmt_success -> bindParam('amount', $value_success['quantity']);
+                            $stmt_success -> bindParam('thanhtien', $value_total);
+                            $stmt_success -> bindParam('id_orders', $last_id_of_orders);
+                            $stmt_success->execute();
+                        }
+                    }
+                }   
+                // --------
+                include '../view/order_success.php';
+                
+                break;
+            case 'delete_order':
+                if(isset($_POST['continue_order'])){
+                    unset($_SESSION['cart']);
+                }
+                header("Location: ?action=home");
+                break;
             default:
                 include '../view/home.php';
                 break;
