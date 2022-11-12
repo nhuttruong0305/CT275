@@ -1,10 +1,24 @@
 <?php 
-    include '../model/PDOconnect.php';
+    include './handleFunction_admin_page.php';
+    $product = get_all_product();
+ 
+    if(isset($_GET['delete_product'])){
+        $id = $_GET['id'];
+        delete_product($id);
+        header("Location: ./admin.php?delete_success");
+    }
 
-    $sql = "select * from product";
-    $stmt = $conn -> prepare($sql);
-    $stmt->execute();
-    $result = $stmt -> fetchAll();
+    if(isset($_GET['delete_success'])){
+        echo '<script language="javascript">';
+        echo 'alert("Xóa thành công!");'; 
+        echo '</script>';
+    }else if(isset($_GET['update_success'])){
+        echo '<script language="javascript">';
+        echo 'alert("Cập nhật sản phẩm thành công !");'; 
+        echo '</script>';
+    }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -33,10 +47,14 @@
             </div>
         </div>
         <div class="row">
-            <button id="btn_add_admin" name="btn_add_product_admin" class="btn">Thêm sản phẩm</button>
+            <button id="btn_add_admin" name="btn_add_product_admin" class="btn">
+                <a href="./add_product.php" class="text-light" style="text-decoration:none">Thêm sản phẩm</a>
+            </button>
         </div>
         <div class="row">
-            <div class="col-sm-12 px-0 mt-3">
+            <div class="col-sm-12 px-0 mt-3" style="    padding-left: 0!important;
+                                                        height: 500px;
+                                                        overflow-y: scroll;">
                 <table class="table table-bordered">
                     <thead class="thead-light">
                         <tr>
@@ -51,20 +69,20 @@
                         </tr>
                     </thead>
                     <tbody id="tbody_admin">
-                        <?php foreach($result as $item){?>
+                        <?php foreach($product as $item){?>
                         <tr>
                             <td><?php echo $item['product_name'];?></td>
                             <td><?php echo $item['price'];?></td>
-                            <td><?php echo $item['brand'];?></td>
+                            <td><?php echo $item['category_name'];?></td>
                             <td style="width: 100px;">
                                 <p><?php echo $item['description'];?></p>
                             </td>
                             <td><?php echo $item['color'];?></td>
                             <td><?php echo $item['brand'];?>y</td>
-                            <td class="b-block"><img class="d-block" src="https://bizweb.dktcdn.net/thumb/large/100/364/402/products/2-042bbb81b1b64e5287a9a94736f714bf-master.jpg?v=1566961266000" alt=""></td>
+                            <td class="b-block"><img class="d-block" src="<?php echo $item['img']?>" alt=""></td>
                             <th style="width: 170px;">
-                                <a href=""><button class="btn btn-warning">Edit</button></a>
-                                <a href=""><button class="btn btn-warning">Delete</button></a>
+                                <a href="./edit_product.php?id=<?php echo $item['id'];?>"><button class="btn btn-warning">Edit</button></a>
+                                <a href="?delete_product&id=<?php echo $item['id']?>"><button class="btn btn-warning">Delete</button></a>
                             </th>
                         </tr>
                         <?php }?>
