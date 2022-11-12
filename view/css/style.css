@@ -408,6 +408,21 @@
     border: 2px solid rgb(247, 148, 29);
 }
 
+#btn_change_quantity{
+    border: 1px solid #333;
+    height: 30px;
+    width: 80px;
+    margin: 0 auto;
+    color: black;
+    border-radius: 2px;
+}
+
+#btn_change_quantity a{
+    color: rgb(0, 0, 132);
+    text-decoration: none;
+    font-size: 20px;
+}
+
 
 /* --------------------------------------------- */
 /* contact */

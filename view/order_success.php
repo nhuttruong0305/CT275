@@ -35,7 +35,7 @@
                 <div class="col-lg-5">
                     <div class="card">
                         <div class="card-header">
-                            Đơn hàng #031505
+                            Đơn hàng #<?php echo $last_id_of_orders;?>
                         </div>
 
                         <?php if(isset($product_in_order_success)){
