@@ -5,7 +5,7 @@
         <p class="text-center" id="title-page">Đăng ký tài khoản</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center" id="bread-crumb">
-                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>
                 <li class="breadcrumb-item active" style="color: rgb(247, 148, 29); font-weight: 600;" aria-current="page">Đăng ký tài khoản</li>
             </ol>
         </nav>

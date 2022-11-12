@@ -58,6 +58,7 @@
                 <table class="table table-bordered">
                     <thead class="thead-light">
                         <tr>
+                            <th scope="col">STT</th>
                             <th scope="col">Tên sản phẩm</th>
                             <th scope="col">Giá</th>
                             <th scope="col">Loại</th>
@@ -69,8 +70,9 @@
                         </tr>
                     </thead>
                     <tbody id="tbody_admin">
-                        <?php foreach($product as $item){?>
+                        <?php $stt = 1;foreach($product as $item){?>
                         <tr>
+                            <td><?php echo $stt++;?></td>
                             <td><?php echo $item['product_name'];?></td>
                             <td><?php echo $item['price'];?></td>
                             <td><?php echo $item['category_name'];?></td>
@@ -78,8 +80,8 @@
                                 <p><?php echo $item['description'];?></p>
                             </td>
                             <td><?php echo $item['color'];?></td>
-                            <td><?php echo $item['brand'];?>y</td>
-                            <td class="b-block"><img class="d-block" src="<?php echo $item['img']?>" alt=""></td>
+                            <td><?php echo $item['brand'];?></td>
+                            <td class="b-block"><img class="d-block" src="./upload/<?php echo $item['img']?>" alt=""></td>
                             <th style="width: 170px;">
                                 <a href="./edit_product.php?id=<?php echo $item['id'];?>"><button class="btn btn-warning">Edit</button></a>
                                 <a href="?delete_product&id=<?php echo $item['id']?>"><button class="btn btn-warning">Delete</button></a>

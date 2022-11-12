@@ -7,40 +7,47 @@
 
     //Tiến hành cập nhật sản phẩm
     if(isset($_GET['edit_product'])){
-            if(isset($_POST['name_product_edit'])&&isset($_POST['price_product_edit'])&&isset($_POST['type_product_edit'])
-            &&isset($_POST['description_product_edit'])&&isset($_POST['color_product_edit'])&&isset($_POST['brand_product_edit'])&&isset($_FILES['img_product'])){
-                $name_product_edit = $_POST['name_product_edit'];
-                $price_product_edit = $_POST['price_product_edit'];
-                $type_product_edit = $_POST['type_product_edit'];
-                $des_product_edit = $_POST['description_product_edit'];
-                $color_product_edit = $_POST['color_product_edit'];
-                $brand_product_edit = $_POST['brand_product_edit'];
-                $img_product = $_FILES['img_product'];
+                if(isset($_POST['name_product_edit'])&&isset($_POST['price_product_edit'])&&isset($_POST['type_product_edit'])
+                &&isset($_POST['description_product_edit'])&&isset($_POST['color_product_edit'])&&isset($_POST['brand_product_edit'])&&isset($_FILES['img_product'])){
+                    $name_product_edit = $_POST['name_product_edit'];
+                    $price_product_edit = $_POST['price_product_edit'];
+                    $type_product_edit = $_POST['type_product_edit'];
+                    $des_product_edit = $_POST['description_product_edit'];
+                    $color_product_edit = $_POST['color_product_edit'];
+                    $brand_product_edit = $_POST['brand_product_edit'];
+                    $img_product = $_FILES['img_product'];
 
-                //Lấy category_id từ bảng category
-                $category_id = get_category_id($type_product_edit);
 
-                //Xử lí file ảnh upload
-                $checkup_load = upload_img($img_product);
+                    if(empty($img_product['name'])){
+                        //Lấy category_id từ bảng category
+                        $category_id = get_category_id($type_product_edit);
+                        update_product_to_DB($name_product_edit, $price_product_edit, $category_id, $des_product_edit, $color_product_edit, $brand_product_edit, $_POST['img_old'], $id);
+                        header("Location: admin.php?update_success");
+                    }else{
+                        //Lấy category_id từ bảng category
+                        $category_id = get_category_id($type_product_edit);
 
-                $img_old = $product_data['img'];
-                if($checkup_load == 1){
-                    unlink("./upload/$img_old");
-                    update_product_to_DB($name_product_edit, $price_product_edit, $category_id, $des_product_edit, $color_product_edit, $brand_product_edit, $img_product['name'], $id);
-                    header("Location: admin.php?update_success");
-                }else{
+                        //Xử lí file ảnh upload
+                        $checkup_load = upload_img($img_product);
+
+                        $img_old = $product_data['img'];
+                        if($checkup_load == 1){
+                            unlink("./upload/$img_old");
+                            update_product_to_DB($name_product_edit, $price_product_edit, $category_id, $des_product_edit, $color_product_edit, $brand_product_edit, $img_product["name"], $id);
+                            header("Location: admin.php?update_success");
+                        }else{
+                            echo '<script language="javascript">';
+                            echo 'alert("Không thể upload được file ảnh !");'; 
+                            echo '</script>';
+                        }
+                    }
+                }else {
                     echo '<script language="javascript">';
                     echo 'alert("Không thể upload được file ảnh !");'; 
                     echo '</script>';
                 }
-            }else {
-                echo 'con cho';
-                echo '<script language="javascript">';
-                echo 'alert("Không thể upload được file ảnh !");'; 
-                echo '</script>';
             }
         }
-    }
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +83,7 @@
                 <br>
                 <select id="type_product_edit" name="type_product_edit" class="form-control" required>
                     <?php foreach($product as $value) {?>
-                        <option value="<?php echo $value['category_name']?>"><?php echo $value['category_name'];?></option>
+                        <option value="<?php echo $value['category_name']?>" <?php if($value['category_name'] == $product_data['category_name'] ) echo 'selected';?>><?php echo $value['category_name'];?></option>
                     <?php }?>
                 </select>
             </div>
@@ -96,12 +103,13 @@
             </div>
             <div>
                 <h4>Ảnh sản phẩm hiện tại</h4>
-                <img src="./upload/<?php echo $product_data['img']?>" class="img-thumbnail" alt="..." width="200px" height="200px" name="img_old">
+                <img src="./upload/<?php echo $product_data['img']?>" class="img-thumbnail" alt="..." width="200px" height="200px">
+                <input type="hidden" name="img_old" value="<?php echo $product_data['img']?>">
             </div>
             <div class="custom-file">
                 <input type="file"
                 id="fileToUpload" name="img_product"
-                accept="image/png, image/jpeg" required>
+                accept="image/png, image/jpeg">
                 <!-- <input type="file" class="custom-file-input" id="customFile"> -->
                 <!-- <label class="custom-file-label" for="customFile">Choose file</label> -->
             </div>
