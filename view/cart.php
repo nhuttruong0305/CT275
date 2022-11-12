@@ -32,7 +32,7 @@
                                         <td style="padding-top: 60px;">
                                             <a href="?action=delete_cart&id_product_in_cart=<?php echo $id?>"><i class="fas fa-eraser"></i></a>
                                         </td>
-                                        <td> <?php echo '<img style="width: 120px; height: auto;" src="'.$value['img'].'" alt="">'; ?></tdscope=>    
+                                        <td> <?php echo '<img style="width: 120px; height: auto;" src="../admin/upload/'.$value['img'].'" alt="">'; ?></tdscope=>    
                                         
                                         <td style="padding-top: 60px;">
                                             <?php echo $value['product_name'];?>

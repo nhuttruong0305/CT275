@@ -1,0 +1,7 @@
+{
+    "name": "autoload/ct275",
+    "description": "use library on packagist for project",
+    "require": {
+        "ajaz/random-quotes-generator-php": "^1.0"
+    }
+}

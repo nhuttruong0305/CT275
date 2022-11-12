@@ -131,6 +131,25 @@
 
 /* --------------------------------------------- */
 /* home */
+#top_img_home{
+    position: relative;
+}
+
+#top_img_home p{
+    position: absolute;
+    color: rgb(247,148,29);
+    right: 21px;
+    bottom: 0;
+    font-weight: bold;
+}
+
+#top_img_home span{
+    font-weight: bold;
+    text-align: right;
+    display: block;
+    color: black;
+}
+
 #top_img_home img{
     height: auto;
     width: 100%;
@@ -749,3 +768,19 @@ footer{
 .content_sub_news{
     font-weight: 600;
 }
+
+
+/* Sử dụng hiệu ứng loader chờ đợi trang web tải xong. */
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-image: url("../../view/img/loading_icon.gif");
+    background-repeat: no-repeat; 
+    background-color: #FFF;
+    background-position: center;
+    opacity: 0.5;
+ }

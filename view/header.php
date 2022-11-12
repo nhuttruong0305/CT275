@@ -20,8 +20,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--Sử dụng Aos-->
 </head>
 <body>
+	<!--Sử dụng preloader-->
+	<div class="preloader"></div>
 	<header class="container mt-4">
 		<div class="row align-items-center">
 			<div class="col-md-3 my-3"><img style="width: 100%;" src="../view/img/LUXENUS FURNITURE.png" alt=""></div>

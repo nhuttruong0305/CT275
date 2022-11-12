@@ -75,6 +75,7 @@
             <i class="fas fa-arrow-up fa-lg" id="arrow_up"></i>
         </div>
     </a>
+  
 </footer>
 <!-- Optional JavaScript; choose one of the two! -->
 
@@ -89,5 +90,37 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 -->
+
+    <!--Import Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <!--Sử dụng thư viện AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    <!--Kết thúc sử dụng thư viện AOS-->
+<!-- <script>
+  window.addEventListener('load', (event) => {
+//   console.log('page is fully loaded');
+    ('.preloader').style.display = 'none';
+});
+</script> -->
+  
+    <!-- <script>
+        $(window).load(function() {
+            $('.preloader').fadeOut('slow');
+        });
+        console.log('ok');
+    </script> -->
+
+    <script>
+        $(document).ready(function(){
+            // jQuery methods go here...
+            $('.preloader').fadeOut() ;
+        });
+    </script>
+
 </body>
 </html>

@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mb-3">
-                <?php echo '<img id="img_detail" src="'.$detail_product['img'].'" alt="">'; ?>
+                <?php echo '<img id="img_detail" src="../admin/upload/'.$detail_product['img'].'" alt="">'; ?>
                 <!-- <img id="img_detail" src="https://bizweb.dktcdn.net/thumb/1024x1024/100/364/402/products/2-acaf4822a6e84c0bad48378c37346e92-master.jpg" alt=""> -->
             </div>
             <div id="contains_product_details" class="col-md-6">

@@ -186,6 +186,13 @@
                 if(isset($_GET['search_product'])){
                     header("Location: ?action=search_product&search_key=".$_GET['search_product']);
                 }
+
+                require_once '../vendor/autoload.php';
+    
+                $quote = new \RandomQuotes\RandomQuotes();
+
+                $quotes_random = $quote -> generate();
+
                 include '../view/home.php';
                 break;
         }
