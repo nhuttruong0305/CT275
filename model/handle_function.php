@@ -41,48 +41,48 @@
         $status_process = '';
         if(isset($_POST['btn_login'])){
             if(isset($_POST['email']) && isset($_POST['password'])){
-
                 $email = $_POST['email'];
                 $password = $_POST['password'];
 
-                if($email == 'admin@gmail.com' && $password == 'admin'){
-                    header("Location: ../admin/admin.php");
-                }else{
-                    $sql = "select * from account where email = ?";
-                    $stmt = $conn -> prepare($sql);
-                    $stmt->execute([$email]);
-    
-                    $result_from_DB = $stmt -> fetch();
-    
-                    if($stmt -> rowCount() > 0){
-                        $password_hash_from_DB = $result_from_DB['pass_word']; 
-    
-                        if(password_verify($password, $password_hash_from_DB)){ //Compare password 
-                            $full_name = $result_from_DB['full_name'];
-    
-                            $status_process = 'success';
-                            if(isset($_POST['remember_login']) && ($_POST['remember_login'])){
-                                setcookie("remember_login", $full_name, time() + 3600);
-                                $_SESSION['email_customer'] = $result_from_DB['email'];
-                                $_SESSION['phone_number'] = $result_from_DB['phone_number'];
-                            }else{
-                                $_SESSION['login_success'] = $full_name;
-                                $_SESSION['email_customer'] = $result_from_DB['email'];
-                                $_SESSION['phone_number'] = $result_from_DB['phone_number'];    
-                            }
-                        } else{
-                            $status_process = 'fail';
+                $sql = "select * from account where email = ?";
+                $stmt = $conn -> prepare($sql);
+                $stmt->execute([$email]);
+
+                $result_from_DB = $stmt -> fetch();
+
+                if($stmt -> rowCount() > 0){
+                    $password_hash_from_DB = $result_from_DB['pass_word']; 
+                    
+                    if(password_verify($password, $password_hash_from_DB)){ //Compare password 
+                        if($result_from_DB['email'] == 'admin123@gmail.com'){
+                            header("Location: ../admin/admin.php");
+                            exit();
                         }
-                    }else{
+                        $full_name = $result_from_DB['full_name'];
+                            
+                        $status_process = 'success';
+                        if(isset($_POST['remember_login']) && ($_POST['remember_login'])){
+                            setcookie("remember_login", $full_name, time() + 3600);
+                            $_SESSION['email_customer'] = $result_from_DB['email'];
+                            $_SESSION['phone_number'] = $result_from_DB['phone_number'];
+                        }else{
+                            $_SESSION['login_success'] = $full_name;
+                            $_SESSION['email_customer'] = $result_from_DB['email'];
+                            $_SESSION['phone_number'] = $result_from_DB['phone_number'];    
+                        }
+                    } else{
                         $status_process = 'fail';
                     }
+                }else{
+                    $status_process = 'fail';
                 }
-
             }
             else{
                 $status_process = 'fail';
             }
+
         }
+       
         return $status_process;
     }
 
@@ -162,7 +162,7 @@
                 
                 $sql="insert into orders (full_name,address,phone_number,email,total,payment) values(?,?,?,?,?,?)";
                 $stmt = $conn -> prepare($sql);
-                $stmt -> execute([$_POST['name_customer_cart'], $_POST['address_customer_cart'], $_POST['sdt_customer_cart'], $_POST['email_customer_cart'],$_POST['total_order'],$_POST['payments_customer_cart']]);
+                $stmt -> execute([$_POST['name_customer_cart'], $_POST['address_customer_cart'], $_POST['sdt_customer_cart'], $_POST['email_customer_cart'],($_POST['total_order']+20000),$_POST['payments_customer_cart']]);
                 
             }
             //Trả về ID cuối cùng được thêm vào bảng orders

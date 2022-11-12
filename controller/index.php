@@ -50,6 +50,24 @@
             case 'news':
                 include '../view/news.php';
                 break;
+            case 'news1':
+                include '../view/news1.php';
+                break;
+            case 'news2':
+                include '../view/news2.php';
+                break;
+            case 'news3':
+                include '../view/news3.php';
+                break;
+            case 'news4':
+                include '../view/news4.php';
+                break;
+            case 'news5':
+                include '../view/news5.php';
+                break;
+            case 'news6':
+                include '../view/news6.php';
+                break;    
             case 'register':
                 $status_register = register_process();
                 switch($status_register){
@@ -163,6 +181,7 @@
                     
                 include '../view/cart.php';
                 break;
+        
             default:
                 if(isset($_GET['search_product'])){
                     header("Location: ?action=search_product&search_key=".$_GET['search_product']);
