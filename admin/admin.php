@@ -5,11 +5,20 @@
     if(isset($_GET['delete_product'])){
         $id = $_GET['id'];
         delete_product($id);
+        header("Location: ./admin.php?delete_success");
+    }
+
+    if(isset($_GET['delete_success'])){
         echo '<script language="javascript">';
         echo 'alert("Xóa thành công!");'; 
         echo '</script>';
-        header("Location: ./admin.php");
+    }else if(isset($_GET['update_success'])){
+        echo '<script language="javascript">';
+        echo 'alert("Cập nhật sản phẩm thành công !");'; 
+        echo '</script>';
     }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +81,7 @@
                             <td><?php echo $item['brand'];?>y</td>
                             <td class="b-block"><img class="d-block" src="<?php echo $item['img']?>" alt=""></td>
                             <th style="width: 170px;">
-                                <a href=""><button class="btn btn-warning">Edit</button></a>
+                                <a href="./edit_product.php?id=<?php echo $item['id'];?>"><button class="btn btn-warning">Edit</button></a>
                                 <a href="?delete_product&id=<?php echo $item['id']?>"><button class="btn btn-warning">Delete</button></a>
                             </th>
                         </tr>

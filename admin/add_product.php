@@ -21,6 +21,9 @@
 
                 if($checkup_load == 1){
                     add_product_to_DB($name_product_add, $price_product_add, $category_id, $des_product_add, $color_product_add, $brand_product_add, $img_product['name']);
+                    echo '<script language="javascript">';
+                    echo 'alert("Thêm sản phẩm mới thành công !");'; 
+                    echo '</script>';
                 }else{
                     echo '<script language="javascript">';
                     echo 'alert("Không thể upload được file ảnh !");'; 
@@ -91,7 +94,7 @@
             <div class="custom-file">
                 <input type="file"
                 id="fileToUpload" name="img_product"
-                accept="image/png, image/jpeg">
+                accept="image/png, image/jpeg" required>
                 <!-- <input type="file" class="custom-file-input" id="customFile"> -->
                 <!-- <label class="custom-file-label" for="customFile">Choose file</label> -->
             </div>
