@@ -41,9 +41,11 @@
                                             <?php echo number_format($value['price'],0,'','.'). " đ";?>
                                         </td>
                                         <td style="padding-top: 60px;">
-                                            <a href="?action=change_quantity&type=decrease&quantity=<?php echo $value['quantity']?>&id=<?php echo $id?>">-</a>
-                                            <?php echo $value['quantity']; ?>
-                                            <a href="?action=change_quantity&type=increase&quantity=<?php echo $value['quantity']?>&id=<?php echo $id?>">+</a>
+                                            <div id="btn_change_quantity" class="d-flex justify-content-around align-items-center">
+                                                <a href="?action=change_quantity&type=decrease&quantity=<?php echo $value['quantity']?>&id=<?php echo $id?>">-</a>
+                                                <?php echo $value['quantity'];?> 
+                                                <a href="?action=change_quantity&type=increase&quantity=<?php echo $value['quantity']?>&id=<?php echo $id?>">+</a>
+                                            </div>
                                         </td>
                                         <td style="padding-top: 60px;"><?php echo number_format($value['quantity']*$value['price'],0,'','.'). " đ"; ?></td>
                                     </tr>
