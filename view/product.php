@@ -55,9 +55,9 @@
             <div class="row">
                 <?php foreach($product as $value){
                     echo '
-                        <div class="col-md-3 col-6 featured_item_home">
+                        <div class="col-md-3 col-6 featured_item_home" data-aos="zoom-out">
                             <a href="../controller/index.php?action=detail_product&id_product='.$value['id'].'" class="d-block">
-                                <img src="'.$value['img'].'" alt="">
+                                <img src="../admin/upload/'.$value['img'].'" alt="">
                             </a>
                             <a href="../controller/index.php?action=detail_product&id_product='.$value['id'].'" class="d-block text-center mt-3 featured_item_name_home">'.$value['product_name'].'</a>
                             <p class="text-center featured_item_price_home">'.number_format($value['price'],0,'','.')." đ".'</p>

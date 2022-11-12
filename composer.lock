@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c1db078c5e0a1ca8a7a522b08cfb643b",
+    "packages": [
+        {
+            "name": "ajaz/random-quotes-generator-php",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ajazsaif/random-quotes-generator-php.git",
+                "reference": "995b6404e3737debea583e2e75ff9a44ea00bba6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ajazsaif/random-quotes-generator-php/zipball/995b6404e3737debea583e2e75ff9a44ea00bba6",
+                "reference": "995b6404e3737debea583e2e75ff9a44ea00bba6",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RandomQuotes\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ajaz",
+                    "email": "ajazaalam@gmail.com"
+                }
+            ],
+            "description": "This library will generate random quotes",
+            "support": {
+                "issues": "https://github.com/ajazsaif/random-quotes-generator-php/issues",
+                "source": "https://github.com/ajazsaif/random-quotes-generator-php/tree/1.0"
+            },
+            "time": "2020-11-06T10:48:46+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
