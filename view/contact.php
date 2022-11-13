@@ -3,7 +3,7 @@
 <main class="container-fluid" id="main_contact">
     <div class="row">
     <div id="breadcrumb-background">
-        <p class="text-center" id="title-page">Tin tức</p>
+        <p class="text-center" id="title-page">Liên hệ</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center" id="bread-crumb">
                 <li class="breadcrumb-item"><a href="../controller/index.php?action=home">Trang chủ</a></li>
