@@ -45,7 +45,7 @@
                         <div id="card_body_order_success" class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <img src="<?php echo $value_success['img'];?>" alt="">
+                                    <img src="<?php echo '../admin/upload/'.$value_success['img'];?>" alt="">
                                     <span><?php echo $value_success['product_name'];?></span>
                                 </div>
                                 <p><?php echo number_format($value_success['price']*$value_success['quantity'],0,'','.')." đ"?></p>

@@ -2,15 +2,15 @@
 <title>Liên hệ</title>
 <main class="container-fluid" id="main_contact">
     <div class="row">
-        <div class="col-sm-12 col-lg text-center" id="img_background">
-            <h1 class="text-light font-weight-bold">Liên hệ</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center">
-                    <li class="breadcrumb-item"><a href="#" class="text-light font-weight-bold">Trang chủ</a></li>
-                    <li class="breadcrumb-item active text-warning font-weight-bold" aria-current="page">Liên hệ</li>
-                </ol>
-            </nav>
-        </div>
+    <div id="breadcrumb-background">
+        <p class="text-center" id="title-page">Tin tức</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center" id="bread-crumb">
+                <li class="breadcrumb-item"><a href="../controller/index.php?action=home">Trang chủ</a></li>
+                <li class="breadcrumb-item active" style="color: rgb(247, 148, 29); font-weight: 600;" aria-current="page">Liên hệ</li>
+            </ol>
+        </nav>
+    </div>
     </div>
     <div class="row container-fluid d-flex mt-5">
         <div class="col-lg"></div>

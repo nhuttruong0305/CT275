@@ -4,9 +4,9 @@
         <p class="text-center" id="title-page"><?php echo $detail_product['product_name'];?></p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center" id="bread-crumb">
-                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="../controller/index.php?action=home">Trang chủ</a></li>
                 <!-- cần echo thêm loại sản phẩm -->
-                <li class="breadcrumb-item"><a href="index.html"><?php echo UCWords ($name_of_category); ?></a></li>
+                <li class="breadcrumb-item"><a href="../controller/index.php?action=product&category_id=<?php echo $id_of_category;?>"><?php echo UCWords ($name_of_category); ?></a></li>
 
                 <li class="breadcrumb-item active" style="color: rgb(247, 148, 29); font-weight: 600;" aria-current="page"><?php echo $detail_product['product_name'];?></li>
             </ol>

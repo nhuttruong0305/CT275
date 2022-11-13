@@ -55,7 +55,7 @@
                 <a href="./admin.php" class="text-light" style="text-decoration:none">Trở về</a>
             </button>
         </div>
-        <a id="back_to_home_admin" href="">
+        <a id="back_to_home_admin" href="./admin.php">
             <h3 class="text-center mt-5">Luxenus Furniture</h3>
         </a>
         <h6 class="text-center">Thêm sản phẩm bạn muốn tại đây</h6>

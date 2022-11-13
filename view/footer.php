@@ -39,8 +39,8 @@
         <div class="col-sm-6 col-lg-3">
             <h4 class="footer_title mb-4">VỀ CHÚNG TÔI</h4>
             <p id="about-us">
-                <a class="d-block" href="../public/about.html">Giới thiệu</a>
-                <a class="d-block" href="">Gửi góp ý, khiếu nại</a>
+                <a class="d-block" href="?action=about">Giới thiệu</a>
+                <a class="d-block" href="?action=contact">Gửi góp ý, khiếu nại</a>
             </p>
         </div>
         <div class="col-sm-6 col-lg-3">
@@ -53,10 +53,10 @@
         <div class="col-sm-6 col-lg-3">
             <h4 class="footer_title mb-4">KẾT NỐI VỚI CHÚNG TÔI</h4>
             <p id="social-network">
-                <a href=""><i class="fab fa-facebook-f fa-lg"></i></a>
-                <a href=""><i class="fab fa-twitter fa-lg"></i></a>
-                <a href=""><i class="fab fa-youtube fa-lg"></i></a>
-                <a href=""><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
             </p>
             <h4 class="footer_title">PHƯƠNG THỨC THANH TOÁN</h4>
             <img src="../view/img/footer/payment_1.svg" alt="" class="my-1">
@@ -80,10 +80,11 @@
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../view/js/jquery.validate.js"></script>
-<script type="text/javascript" src="../view/js/validate_register.js"></script>
+
+
 <!-- Option 2: Separate Popper and Bootstrap JS -->
 <!--
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -92,7 +93,7 @@
 -->
 
     <!--Import Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 
 
     <!--Sử dụng thư viện AOS-->
@@ -121,6 +122,9 @@
             $('.preloader').fadeOut() ;
         });
     </script>
+<script type="text/javascript" src="../view/js/jquery.validate.js"></script>
+<script type="text/javascript" src="../view/js/validate_register.js"></script>
+<script type="text/javascript" src="../view/js/validate_cart.js"></script>
 
 </body>
 </html>

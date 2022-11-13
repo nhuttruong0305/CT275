@@ -2,12 +2,12 @@
 <!-- Chèn header -->
 <main class="container-fluid">
     <div class="row">
-        <div class="col-lg col-sm-12 text-center" id="img_background">
-            <h1 class="text-light font-weight-bold">Đăng nhập tài khoản</h1>
+        <div id="breadcrumb-background">
+            <p class="text-center" id="title-page">Tin tức</p>
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center">
-                    <li class="breadcrumb-item"><a href="#" class="text-light font-weight-bold">Trang chủ</a></li>
-                    <li class="breadcrumb-item active text-warning font-weight-bold" style="color: rgb(247, 148, 29); font-weight: 600;" aria-current="page">Đăng nhập tài khoản</li>
+                <ol class="breadcrumb justify-content-center" id="bread-crumb">
+                    <li class="breadcrumb-item"><a href="../controller/index.php?action=home">Trang chủ</a></li>
+                    <li class="breadcrumb-item active" style="color: rgb(247, 148, 29); font-weight: 600;" aria-current="page">Đăng nhập</li>
                 </ol>
             </nav>
         </div>

@@ -44,7 +44,7 @@
                 <div class="col-6 col-lg-2 col-md-4 nav_item_product_home">
                     <a href="../controller/index.php?action=product&category_id=6" class="d-block text-center">
                     <img src="https://file.hstatic.net/200000280801/collection/050-closet_74974ddd24a34029bfeaf0eed1d90304.png" alt="">  
-                        <p>Tủ quần áo</p>
+                        <p>Tủ</p>
                     </a>
                 </div>
             </div>

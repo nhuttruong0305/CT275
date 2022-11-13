@@ -2,15 +2,15 @@
 <!-- Chèn header -->
 <main>
     <div class="row">
-    <div id="breadcrumb-background">
-        <p class="text-center" id="title-page">Tin tức</p>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center" id="bread-crumb">
-                <li class="breadcrumb-item"><a href="../controller/index.php?action=home">Trang chủ</a></li>
-                <li class="breadcrumb-item active" style="color: rgb(247, 148, 29); font-weight: 600;" aria-current="page">Tin tức</li>
-            </ol>
-        </nav>
-    </div>
+        <div id="breadcrumb-background">
+            <p class="text-center" id="title-page">Tin tức</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center" id="bread-crumb">
+                    <li class="breadcrumb-item"><a href="../controller/index.php?action=home">Trang chủ</a></li>
+                    <li class="breadcrumb-item active" style="color: rgb(247, 148, 29); font-weight: 600;" aria-current="page">Tin tức</li>
+                </ol>
+            </nav>
+        </div>
     </div>
     <div id="news-content" class="container">
         <div id="box-header" class="row">
