@@ -3,7 +3,7 @@
 <main class="container-fluid">
     <div class="row">
         <div id="breadcrumb-background">
-            <p class="text-center" id="title-page">Tin tức</p>
+            <p class="text-center" id="title-page">Đăng nhập</p>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center" id="bread-crumb">
                     <li class="breadcrumb-item"><a href="../controller/index.php?action=home">Trang chủ</a></li>
@@ -32,7 +32,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary d-block" style="margin:0 auto" id="btn_login" name="btn_login">Đăng nhập</button>
                 </form>
-                <span class="d-block text-center mt-4">Bạn chưa có tài khoản, vui lòng đăng kí tại <a href="signup.html">đây.</a></span>
+                <span class="d-block text-center mt-4">Bạn chưa có tài khoản, vui lòng đăng kí tại <a href="?action=register">đây.</a></span>
         </div>
         <div class="col-lg"></div>
     </div>
