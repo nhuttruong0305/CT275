@@ -1,6 +1,17 @@
 <title>Giới thiệu</title>
 <!-- Chèn header -->
 <main class="container">
+    <div class="row">
+        <div id="breadcrumb-background">
+            <p class="text-center" id="title-page">Giới thiệu</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center" id="bread-crumb">
+                    <li class="breadcrumb-item"><a href="../controller/index.php?action=home">Trang chủ</a></li>
+                    <li class="breadcrumb-item active" style="color: rgb(247, 148, 29); font-weight: 600;" aria-current="page">Giới thiệu</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
     <h1 style="font-weight: 800;">Giới thiệu</h1>
     <p>LUXENUS FURNITURE là sàn thương mại điện tử chuyên cung cấp các sản phẩm nội thất và trang trí nội thất cho thị trường Việt Nam. Chúng tôi tin rằng hạnh phúc của mỗi gia đình đều được vun đắp từ nhà, không gian sống tạo dựng giá trị cuộc sống. Chính vì vậy mục tiêu, sứ mệnh mà LUXENUS FURNITURE hướng tới là đem đến những giải pháp tối ưu về nội thất cho nhà ở, văn phòng… Với con đường mà LUXENUS FURNITURE đã chọn, chúng tôi mong muốn được cùng xây tổ ấm với triệu gia đình Việt đồng thời cùng chung tay kiến tạo không gian làm việc chuyên nghiệp với các doanh nghiệp tại Việt Nam.</p>
     <p>LUXENUS FURNITURE xây dựng một thương hiệu thân thiện thông qua cách chúng tôi làm sản phẩm và đem sản phẩm đó đến tay của bạn. Một sản phẩm thân thiện được cung cấp bởi một dịch vụ thân thiện chính là Kim chỉ nam để thành công của chúng tôi.</p>
