@@ -224,10 +224,10 @@
                     <div class="col-6 col-md-3 featured_item_home" data-aos="fade-down"
                                                                     data-aos-easing="linear"
                                                                     data-aos-duration="1000">
-                        <a href="../controller/index.php?action=detail_product&id_product=26" class="d-block">
+                        <a href="../controller/index.php?action=detail_product&id_product=47" class="d-block">
                             <img src="../admin/upload/sofa_bang_bellla.jpg" alt="">
                         </a>
-                        <a href="../controller/index.php?action=detail_product&id_product=26" class="d-block text-center mt-3 featured_item_name_home">Sofa băng BELLA</a>
+                        <a href="../controller/index.php?action=detail_product&id_product=47" class="d-block text-center mt-3 featured_item_name_home">Sofa băng BELLA</a>
                         <p class="text-center featured_item_price_home">2.200.000đ</p>
                     </div>
                 </div>

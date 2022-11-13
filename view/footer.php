@@ -119,7 +119,7 @@
     <script>
         $(document).ready(function(){
             // jQuery methods go here...
-            $('.preloader').fadeOut() ;
+            $('.preloader').fadeOut('slow') ;
         });
     </script>
 <script type="text/javascript" src="../view/js/jquery.validate.js"></script>
