@@ -37,7 +37,7 @@
 <body>
     <main class="container">
         <div class="top_container">
-            <a id="back_to_home_admin" href="">
+            <a id="back_to_home_admin" href="#">
                 <h3 class="text-center mt-5">Luxenus Furniture</h3>
             </a>
             <div class="right_top_container">

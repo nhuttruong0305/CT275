@@ -147,21 +147,21 @@
                                 <img src="../admin/upload/ban_aillen_02.jpg" alt="">
                             </a>
                             <a href="../controller/index.php?action=detail_product&id_product=12" class="d-block text-center mt-3 featured_item_name_home">Bàn Aillen 02</a>
-                            <p class="text-center featured_item_price_home">680.000đ</p>
+                            <p class="text-center featured_item_price_home">670.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home" data-aos="zoom-in-right">
                             <a href="../controller/index.php?action=detail_product&id_product=29" class="d-block">
                                 <img src="../admin/upload/ban_binas.jpg" alt="">
                             </a>
                             <a href="../controller/index.php?action=detail_product&id_product=29" class="d-block text-center mt-3 featured_item_name_home">Bàn Binas</a>
-                            <p class="text-center featured_item_price_home">890.000đ</p>
+                            <p class="text-center featured_item_price_home">900.000đ</p>
                         </div>
                         <div class="col-md-4 col-6 featured_item_home" data-aos="zoom-in-right">
                             <a href="../controller/index.php?action=detail_product&id_product=30" class="d-block">
                                 <img src="../admin/upload/sofa_giuong_aurora.jpg" alt="">
                             </a>
                             <a href="../controller/index.php?action=detail_product&id_product=30" class="d-block text-center mt-3 featured_item_name_home">Sofa giường AURORA</a>
-                            <p class="text-center featured_item_price_home">3.000.000đ</p>   
+                            <p class="text-center featured_item_price_home">3.100.000đ</p>   
                         </div>
                         <div class="col-md-4 col-6 featured_item_home" data-aos="zoom-in-right">
                             <a href="../controller/index.php?action=detail_product&id_product=31" class="d-block">
@@ -224,15 +224,14 @@
                     <div class="col-6 col-md-3 featured_item_home" data-aos="fade-down"
                                                                     data-aos-easing="linear"
                                                                     data-aos-duration="1000">
-                        <a href="../controller/index.php?action=detail_product&id_product=33" class="d-block">
+                        <a href="../controller/index.php?action=detail_product&id_product=26" class="d-block">
                             <img src="../admin/upload/sofa_bang_bellla.jpg" alt="">
                         </a>
-                        <a href="../controller/index.php?action=detail_product&id_product=33" class="d-block text-center mt-3 featured_item_name_home">Sofa băng BELLA</a>
+                        <a href="../controller/index.php?action=detail_product&id_product=26" class="d-block text-center mt-3 featured_item_name_home">Sofa băng BELLA</a>
                         <p class="text-center featured_item_price_home">2.200.000đ</p>
                     </div>
                 </div>
             </div>
-
 
             <div id="tips_home" class="row pl-1">
                 <div class="title_new_tips_home mb-3">
@@ -245,7 +244,7 @@
                             <i class="fas fa-calendar-check"></i>&nbsp;<b>17/04/2022</b>&nbsp;&nbsp;Đăng bởi:<b>LUXENUS</b>
                         </div>
                         <div class="blogs">
-                            <a class="news-blog" href="">Mẹo bảo quản & vệ sinh các đồ nội thất</a>
+                            <a class="news-blog" href="?action=news1">Mẹo bảo quản & vệ sinh các đồ nội thất</a>
                             <p class="blog-summary">Đối với nội thất bằng kim loại, khi xử lý các vết bẩn thông thường, bạn chỉ cầ...</p>
                         </div>
                     </div>
@@ -255,7 +254,7 @@
                             <i class="fas fa-calendar-check"></i>&nbsp;<b>14/11/2022</b>&nbsp;&nbsp;Đăng bởi:<b>LUXENUS</b>
                         </div>
                         <div class="blogs">
-                            <a class="news-blog" href="">Thư thái trong chính căn hộ của bạn</a>
+                            <a class="news-blog" href="?action=news2">Thư thái trong chính căn hộ của bạn</a>
                             <p class="blog-summary">Nét thư thái và thanh lịch là cảm nhận đầu tiên mà nhà nghĩ tới khi kể cho khách ...</p>
                         </div>
                     </div>
@@ -265,7 +264,7 @@
                             <i class="fas fa-calendar-check"></i>&nbsp;<b>3/5/2022</b>&nbsp;&nbsp;Đăng bởi:<b>LUXENUS</b>
                         </div>
                         <div class="blogs">
-                            <a class="news-blog" href="">Bảo quản đồ gỗ khi độ ẩm không khí cao</a>
+                            <a class="news-blog" href="?action=news3">Bảo quản đồ gỗ khi độ ẩm không khí cao</a>
                             <p class="blog-summary">Đồ nội thất bằng gỗ chất lượng cao là một sự đầu tư tuyệt vời để trang trí ngôi nhà ...</p>
                         </div>
                     </div>

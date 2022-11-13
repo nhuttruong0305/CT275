@@ -134,8 +134,21 @@
                     $sql='select * from category c join product p on c.id=p.category_id where p.id=?';
                     $stmt = $conn -> prepare($sql);
                     $stmt ->  execute([$id_of_product]);
-        
+                    $id_of_category=0;
                     $name_of_category=$stmt->fetch()['category_name'];
+                    if($name_of_category=='sofa'){
+                        $id_of_category=1;
+                    }elseif($name_of_category=='ghế'){
+                        $id_of_category=2;
+                    }elseif($name_of_category=='trang trí'){
+                        $id_of_category=3;
+                    }elseif($name_of_category=='kệ sách'){
+                        $id_of_category=4;
+                    }elseif($name_of_category=='bàn'){
+                        $id_of_category=5;
+                    }else{
+                        $id_of_category=6;
+                    }
                 }
                 include '../view/detail_product.php';
                 break;  

@@ -27,7 +27,7 @@
 	<div class="preloader"></div>
 	<header class="container mt-4">
 		<div class="row align-items-center">
-			<div class="col-md-3 my-3"><img style="width: 100%;" src="../view/img/LUXENUS FURNITURE.png" alt=""></div>
+			<div class="col-md-3 my-3"><a href="?action=home"><img style="width: 100%;" src="../view/img/LUXENUS FURNITURE.png" alt=""></a></div>
 			<div class="col-md-5 my-3">
 				<form id="form_search" action="#" method="get" class="d-flex justify-content-center align-items-center">
 					<input class="d-inline-block" type="text" id="input_product" placeholder="Nhập từ khóa tìm kiếm ..." name="search_product">
@@ -80,7 +80,7 @@
 								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=3">Trang trí</a>
 								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=4">Kệ sách</a>
 								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=5">Bàn</a>
-								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=6">Tủ quần áo</a>
+								<a class="dropdown-item" href="../controller/index.php?action=product&category_id=6">Tủ</a>
 							</div>
 						</li>
 						<li class="nav-item mx-2">
