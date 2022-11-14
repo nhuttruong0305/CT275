@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 13, 2022 lúc 11:28 AM
+-- Thời gian đã tạo: Th10 14, 2022 lúc 05:24 AM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -113,7 +113,8 @@ INSERT INTO `orders` (`id`, `full_name`, `address`, `phone_number`, `email`, `to
 (12, 'cá con', 'can thho chau dthawjsdhakj', '0000000000', 'ca@gmail.com', 1270000, 0),
 (13, 'quideptrai@gmail.com', 'tân châu long xuyên an giang', '0988422744', 'quideptrai@gmail.com', 2020000, 0),
 (14, 'quideptrai@gmail.com', 'cà mau sóc trăng an giang', '0988422744', 'quideptrai@gmail.com', 27580000, 0),
-(15, 'Lê Nhựt Trường', 'Cái khế ninh kiều cần thơ', '0966899548', 'truong.lnt123456789@gmail.com', 14820000, 0);
+(15, 'Lê Nhựt Trường', 'Cái khế ninh kiều cần thơ', '0966899548', 'truong.lnt123456789@gmail.com', 14820000, 0),
+(16, 'Nhựt Trường Lê', 'Vĩnh Thọ, Vĩnh Bình, Châu Thành, An Giang', '0966899548', 'truong.lnt123456789@gmail.com', 690000, 0);
 
 -- --------------------------------------------------------
 
@@ -155,7 +156,8 @@ INSERT INTO `orders_detail` (`id`, `product_name`, `product_img`, `price`, `amou
 (17, 'Đồng hồ Miso Limited', 'dong_ho_miso_limited.jpg', 1200000, 5, 6000000, 14),
 (18, 'Tủ Hobu', 'tu_giay_hobu.jpg', 3100000, 2, 6200000, 14),
 (19, 'Ghế Luxury', 'ghe_luxury.jpg', 570000, 10, 5700000, 15),
-(20, 'Bàn Aillen', 'ban_aillen.jpg', 1300000, 7, 9100000, 15);
+(20, 'Bàn Aillen', 'ban_aillen.jpg', 1300000, 7, 9100000, 15),
+(21, 'Bàn Aillen 02', 'ban_aillen_02.jpg', 670000, 1, 670000, 16);
 
 -- --------------------------------------------------------
 
@@ -192,7 +194,6 @@ INSERT INTO `product` (`id`, `product_name`, `price`, `category_id`, `descriptio
 (12, 'Bàn Aillen 02', 670000, 5, 'Với thiết kế tối giản và tinh tế của mình, Aillen 02 sẽ giúp phòng ăn của bạn trở nên ấm cũng và trang nhã hơn.', 'vàng trắng', 'Aillen ', 'ban_aillen_02.jpg'),
 (24, 'Bàn Aillen 01', 460000, 5, 'Một chiếc bàn đơn giản, không chiếm quá nhiều diện tích không gian luôn là sự lựa chọn của mọi người ngày nay. Dù thiết kế tối giản nhưng lại làm cho không gian thêm phần tinh tế', 'trắng', 'Aillen ', 'ban_aillen_01.jpg'),
 (25, 'Tủ Hobu', 3100000, 6, 'Một chiếc tủ đơn giản, không chiếm quá nhiều diện tích không gian luôn là lựa chọn tối ưu của tất cả mọi người hiện nay. Thiết kế dù đơn giản nhưng không kém phần tinh tế', 'trắng', 'Hobu', 'tu_giay_hobu.jpg'),
-(26, 'Sofa băng BELLA', 2200000, 1, 'Với chất liệu vải Indonesia, khung gỗ dầu đỏ, kích thước: D150/160/180*R80*C87 cm cùng với phần đệm êm ái giúp người dùng có trải nghiệm tốt nhất khi ngồi', 'xanh mint', 'Bella', 'sofa_bang_bellla.jpg'),
 (27, 'Kệ treo Poplar', 500000, 4, 'Kệ treo Poplar màu sắc trang nhã, chân trắng, chất liệu gồm Gỗ bạch dương và MFC.Thiết kế chắc chắn cùng kiểu dáng sang trọng.', 'trắng', 'Poplar', 'ke_treo_poplar.jpg'),
 (28, 'Sofa đơn ALICE', 800000, 1, 'Kích thước sofa đơn alice D65*R63*C82 cm cùng chất liệu: Vải Indonesia, khung gỗ tần bì, sẽ cho cảm giác ngồi êm ái.', 'Xám nhạt', 'Alice', 'sofa_don_alice.jpg'),
 (29, 'Bàn Binas', 900000, 5, 'Thiết kế độc đáo, kết hợp hai trong một đem lại sự tiện dụng.Màu sắc tinh tế, sang trọng. Chất liệu gỗ MDF chống mối mọt, chịu ẩm tốt, thân thiện với môi trường. Sơn tĩnh điện chống gỉ sét tối đa.Tháo lắp dễ dàng', 'Trắng, đen, gỗ.', 'Binas', 'ban_binas.jpg'),
@@ -202,7 +203,8 @@ INSERT INTO `product` (`id`, `product_name`, `price`, `category_id`, `descriptio
 (42, 'Bàn Aillen', 1300000, 5, 'Phần mặt bàn làm từ gỗ công nghiệp MDF có khả năng chống ẩm tốt, các đường vân hiên đại.\r\n\r\nPhần chân tháo lắp được làm từ sắt sơn tĩnh điện có khả năng chóng rỉ sét, độ bền hoàn hảo, thuận tiện trong việc di chuyển, tháo rời.\r\n\r\nĐược thiết kế tỉ mỉ đến từng góc độ cho ra bộ khung vững chãi có khả năng chịu lực tốt nhất. ', 'Trắng, đen', 'Aillen', 'ban_aillen.jpg'),
 (44, 'Sofa góc BELLA', 5100000, 1, 'Sofa góc cao cấp BELLA có sự kết hợp giữa nét đẹp hiện đại và cổ điển. Vậy nên sản phẩm thích hợp với nhiều phong cách thiết kế nội thất khác nhau.', 'đen', 'BELLA', 'sofa_goc_bella.png'),
 (45, 'Đồng hồ Tabu 001', 600000, 3, 'Mặt đồng hồ được thiết kế lạ mắt với thêm 2 kim đồng hồ phụ giúp người dùng theo dõi được nhiều thông tin về thời gian hơn.', 'viền đen mặt trắng', 'Tabu', 'dong_ho_tabu_001.png'),
-(46, 'Đồng hồ Tabu', 350000, 3, 'Đồng hồ treo tường với thiết kế tối giản hóa đi phần chữ số khiến cho chiếc đồng hồ trong lạ mắt hơn so với các mẫu hiện tại', 'viền đen mặt trắng', 'Tabu', 'dong_ho_tabu.png');
+(46, 'Đồng hồ Tabu', 350000, 3, 'Đồng hồ treo tường với thiết kế tối giản hóa đi phần chữ số khiến cho chiếc đồng hồ trong lạ mắt hơn so với các mẫu hiện tại', 'viền đen mặt trắng', 'Tabu', 'dong_ho_tabu.png'),
+(47, 'Sofa băng BELLA', 2200000, 1, 'Với chất liệu vải Indonesia, khung gỗ dầu đỏ, kích thước D150/160/180*R80*C87cm cùng với phần đệm êm ái giúp người dùng có trải nghiệm tốt nhất khi ngồi', 'xanh mint', 'BELLA', 'sofa_bang_bella.png');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -260,19 +262,19 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT cho bảng `orders_detail`
 --
 ALTER TABLE `orders_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
